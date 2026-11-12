@@ -257,7 +257,7 @@ WILDY is a small-scale case, not an open-world RPG, but the same rules apply:
 ## Method and limits
 
 - **External review:** targeted desk research across game-design talks/write-ups, dialogue-design essays, Wikipedia definitions, and psychology sources. It is **not** a systematic review or meta-analysis.
-- **Internal review:** GitHub code search across the account, the ResearchLibrary catalogue, and a close read of 15+ public design/engineering documents in `JoshMemory`, `Whispering-Wilds` and WILDY.
+- **Internal review:** GitHub code search across the account, a check of a private research catalogue, and a close read of 15+ public design/engineering documents in `JoshMemory`, `Whispering-Wilds` and WILDY.
 - **Excluded:** private correspondence, credentials, private Google Drive contents and any unpublished personal material. A private catalogue was checked for duplicate research; no private text is reproduced.
 - **Limits:** no player study, no access to full sales/telemetry, and several sources are practitioner write-ups rather than controlled experiments. Counts from Repository Town are snapshots and describe role systems, not verified independent people.
 - **Evidence grades:** A = primary talk/design document; B = practitioner write-up or reference definition; C = this synthesis/inference. See [SOURCES.md](SOURCES.md).

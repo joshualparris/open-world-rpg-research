@@ -1,6 +1,6 @@
 # Audit: What Your Repositories Already Know
 
-**Scope:** a GitHub-wide code search across `joshualparris` and `Parris-Tech-Services`, a check of the private `ResearchLibrary` catalogue, and a close read of 15+ public design/engineering documents. This is an inventory of **existing research and design notes**, not a claim that every proposal is implemented.
+**Scope:** a GitHub-wide code search across `joshualparris` and `Parris-Tech-Services`, a check of a private Dewey-style research catalogue, and a close read of 15+ public design/engineering documents. This is an inventory of **existing research and design notes**, not a claim that every proposal is implemented.
 
 ---
 
@@ -15,9 +15,9 @@ Repositories with relevant material:
 - **`JoshMemory`** — by far the largest body of work: Repository Town, Lantern Road, The Undercity, Neathbound, Schism, Sigil Delve, Whirring Wilderness, and related design/audit documents.
 - **`Whispering-Wilds`** — Josh's explicit RPG preferences and the AI Table DM product brief.
 - **`RunescapeFedoraCrashDoctor` (WILDY)** — an implemented small-scale exploration/arena game with its own research notes.
-- **`ResearchLibrary`** — private Dewey-style catalogue. It indexes research repositories and Drive documents; it is not a source collection. Only title-level metadata was available for one narrative-RPG blueprint; no private content is reproduced here.
-- **`ResearchAtlas`** — private catalogue frontend; not a separate research source for this topic.
-- **`FailbetterGames`** — Fallen London/Sunless Sea architecture notes; adjacent rather than directly about open-world NPC design, so not used as primary evidence.
+- **A private Dewey-style research catalogue** — indexes research repositories and Drive documents; it is a catalogue, not a source collection. Only title-level metadata was available for one narrative-RPG blueprint; no private content is reproduced here.
+- **A private catalogue frontend** — not a separate research source for this topic.
+- **A private interactive-fiction architecture repo** — Fallen London/Sunless Sea notes; adjacent rather than directly about open-world NPC design, so not used as primary evidence.
 - **`ElodinDeepLore`**, **`NeathBound`**, **`Aetheria`**, **`SwordChronicles`** — lore/world content and game prototypes; useful context but not dedicated research on this question.
 
 ---
@@ -206,7 +206,7 @@ There are parallel concepts:
 - `Repository Town` appears in `JoshMemory` and `Parris-Tech-Services/Repository-town` (generated mirror).
 - `Whispering-Wilds` exists as a Python CLI and a browser game.
 - `Neathbound`/`The Undercity`/`Lantern Road` share storylet/QBN patterns.
-- `ResearchLibrary` and `ResearchAtlas` are catalogue/frontend, not source research.
+- The private catalogue and its frontend are catalogue/frontend, not source research.
 
 Consolidation should preserve canonical sources and link, not fork, the evidence.
 
@@ -230,8 +230,8 @@ A practical structure:
 
 - **Source evidence** stays authoritative in the original repo (JoshMemory, Whispering-Wilds, WILDY).
 - **This repo** is the synthesis: the question, findings, evidence grades, checklist, and links.
-- **ResearchLibrary** can catalogue this repo by Dewey subject (700 Arts & Recreation / game design), with a short abstract and link; it should not duplicate the report.
-- **ResearchAtlas** can display the same metadata if it is kept in sync.
+- **A private Dewey-style catalogue** can index this repo by subject (700 Arts & Recreation / game design) with a short abstract and link; it should not duplicate the report.
+- **Its frontend** can display the same metadata if it is kept in sync.
 
 This avoids the common failure mode where five documents each contain a slightly different version of the same claim.
 
