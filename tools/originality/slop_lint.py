@@ -5,6 +5,7 @@
   python slop_lint.py content/ --json                  # machine-readable
   python slop_lint.py content/ --max-score 12          # exit 1 if any file scores above 12 (CI gate)
   python slop_lint.py content/ --voice voice.json      # also read a per-repo "banned" list from the voice file
+  python slop_lint.py client/src/game --code-strings    # game content lives in code: lint long string literals in .ts/.tsx/.js/.json
   python slop_lint.py content/ --patterns my.json      # extend/override the built-in patterns
 
 HOW TO USE THE RESULT
@@ -155,13 +156,25 @@ def lint_text(text, patterns):
                 em_dash_per_1000=round(em_rate, 1), sentence_len_cv=round(cv, 2), lexical_diversity_mattr200=round(mattr, 3) if mattr else None,
                 findings=findings)
 
-def iter_files(paths):
+STRING_RE = re.compile(r'"((?:[^"\\\n]|\\.){30,})"|\'((?:[^\'\\\n]|\\.){30,})\'|`((?:[^`\\]|\\.){30,})`')
+def code_strings(text):
+    """Pull long string literals out of source code so dialogue and descriptions can be linted as prose."""
+    out = []
+    for m in STRING_RE.finditer(text):
+        t = next(g for g in m.groups() if g)
+        if re.search(r"[A-Za-z]{3,} [A-Za-z]{3,}", t) and "://" not in t and "className" not in t:
+            out.append(t.replace("\\n", "\n").replace("\\'", "'").replace('\\"', '"'))
+    return "\n\n".join(out)
+
+def iter_files(paths, code=False):
     for p in paths:
         if os.path.isdir(p):
             for d, dirs, fs in os.walk(p):
                 dirs[:] = [x for x in dirs if x not in {"node_modules", ".git", "dist", "build"}]
                 for f in sorted(fs):
-                    if os.path.splitext(f)[1].lower() in {".md", ".txt"}: yield os.path.join(d, f)
+                    ext = os.path.splitext(f)[1].lower()
+                    if ext in {".md", ".txt"} or (code and ext in {".ts", ".tsx", ".js", ".json"} and not f.endswith("lock.json") and not f.endswith(".d.ts")):
+                        yield os.path.join(d, f)
         else:
             yield p
 
@@ -174,14 +187,16 @@ def main():
     ap.add_argument("--patterns"); ap.add_argument("--voice")
     ap.add_argument("--json", action="store_true")
     ap.add_argument("--top", type=int, default=6, help="findings to show per file")
+    ap.add_argument("--code-strings", action="store_true", help="also lint long string literals in .ts/.tsx/.js/.json files")
     ap.add_argument("--min-words", type=int, default=120, help="skip very short files (scores are noisy)")
     ap.add_argument("--max-score", type=float, default=None, help="exit 1 if any file scores above this")
     a = ap.parse_args()
     pats = load_patterns(a.patterns, a.voice)
     results = []; worst = 0.0
-    for f in iter_files(a.paths):
+    for f in iter_files(a.paths, a.code_strings):
         try: text = open(f, encoding="utf8", errors="ignore").read()
         except OSError: continue
+        if os.path.splitext(f)[1].lower() in {".ts", ".tsx", ".js", ".json"}: text = code_strings(text)
         r = lint_text(text, pats)
         if r["words"] < a.min_words: continue
         r["file"] = f; r["verdict"] = verdict(r["score"]); results.append(r); worst = max(worst, r["score"])
