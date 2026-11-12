@@ -335,4 +335,18 @@ Each item names the finding in [MORE-FROM-YOUR-REPOS.md](MORE-FROM-YOUR-REPOS.md
 
 ---
 
+## 14. Originality (names, places, stories)
+
+See [ORIGINALITY.md](ORIGINALITY.md).
+
+- [ ] The model never chooses names; names come from an engine-owned registry or the generator.
+- [ ] A per-world registry rejects duplicate and near-duplicate names.
+- [ ] A banlist of overused defaults is in the prompt and enforced in validation.
+- [ ] `name_audit.py` runs in CI with a threshold; new content has zero banlist hits unless chosen on purpose.
+- [ ] Places have an economic reason to exist (trade, crossing, works), not just an evocative name.
+- [ ] Each quest's premise is drawn from tables (situation x obstacle x relationship x constraint) before the model writes it.
+- [ ] 50 generated NPCs are near-50 distinct names with no collapsed defaults (measure it).
+
+---
+
 *If most answers are “yes,” the world and cast are probably doing the hard work. If not, start with presence and density before adding more map or more NPCs.*

@@ -2,7 +2,7 @@
 
 **A source-grounded synthesis for large worlds, dense casts and conversations that matter.**
 
-Prepared 2026-11-12 · Desk research, not a playtest report. · Companion files: [REPORT.md](REPORT.md) · [YOUR-REPOS.md](YOUR-REPOS.md) · [MORE-FROM-YOUR-REPOS.md](MORE-FROM-YOUR-REPOS.md) · [CHECKLIST.md](CHECKLIST.md) · [SOURCES.md](SOURCES.md)
+Prepared 2026-11-12 · Desk research, not a playtest report. · Companion files: [REPORT.md](REPORT.md) · [YOUR-REPOS.md](YOUR-REPOS.md) · [MORE-FROM-YOUR-REPOS.md](MORE-FROM-YOUR-REPOS.md) · [ORIGINALITY.md](ORIGINALITY.md) · [CHECKLIST.md](CHECKLIST.md) · [SOURCES.md](SOURCES.md)
 
 ---
 
@@ -286,6 +286,7 @@ WILDY is a small-scale case, not an open-world RPG, but the same rules apply:
 | [REPORT.md](REPORT.md) | The long-form argument, evidence and design detail |
 | [YOUR-REPOS.md](YOUR-REPOS.md) | Audit of existing research across your repositories |
 | [MORE-FROM-YOUR-REPOS.md](MORE-FROM-YOUR-REPOS.md) | Second-pass addendum: 13 further findings, a correction, a convergence map and next actions |
+| [ORIGINALITY.md](ORIGINALITY.md) | Why LLMs reuse names like Mira, what research says, and how to get more original names, places and stories; tools in `tools/originality/` |
 | [CHECKLIST.md](CHECKLIST.md) | Practical design and playtest checklist |
 | [SOURCES.md](SOURCES.md) | Annotated bibliography and evidence quality |
 

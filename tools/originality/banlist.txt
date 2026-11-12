@@ -1,0 +1,43 @@
+# Overused LLM defaults. "Avoid unless you chose it on purpose", not "forbidden".
+# Sources: Cornell Elias study, Antislop, practitioner reports, and recurrence across your own repos.
+# Ordinary words and common real names (Sage, Thorn, Finn, Chen) are left out on purpose, to limit false positives.
+Elara
+Elias
+Mara
+Mira
+Lyra
+Kael
+Kaelen
+Kaelith
+Thorne
+Voss
+Vance
+Seraphina
+Aria
+Lira
+Lumina
+Aldric
+Alaric
+Elowen
+Lysandra
+Theron
+Kira
+Zara
+Nyx
+Elyra
+Eldoria
+Eldermoor
+Whisperwood
+Silverbrook
+Willowbrook
+Ravenhollow
+Ashford
+Blackwood
+Brightwater
+Stonebrook
+Marcus
+Sarah Chen
+Orin
+Oren
+Rowan
+Wren
