@@ -1,7 +1,7 @@
 # Creative Voice, Original Play and NPC Distinctiveness — Portfolio Research Addendum
 
 **Research date:** 12 November 2026 · **Status:** source-grounded design research + repository desk audit; **not** a claim of implementation or completed player testing.  
-**Purpose:** extend, not repeat, the existing [REPORT](REPORT.md), [GAME-REPOS-AUDIT](GAME-REPOS-AUDIT.md), [AI-NAMING-AND-ORIGINALITY](AI-NAMING-AND-ORIGINALITY.md), [NAMING-PLAYBOOK](NAMING-PLAYBOOK.md) and [WRITERS-ROOM](WRITERS-ROOM.md). The latter remains the **single authoritative showrunner/seeded-table/registry/production-rollout plan**; this file adds *player-facing fun, NPC behaviour, empirical speech-style evidence and tests* only.
+**Purpose:** extend, not repeat, the existing [REPORT](REPORT.md), [GAME-REPOS-AUDIT](GAME-REPOS-AUDIT.md), [AI-NAMING-AND-ORIGINALITY](AI-NAMING-AND-ORIGINALITY.md), [NAMING-PLAYBOOK](NAMING-PLAYBOOK.md) and [WRITERS-ROOM](WRITERS-ROOM.md). The latter remains the **single authoritative showrunner/seeded-table/registry/production-rollout plan**; [ANTI-SLOP](ANTI-SLOP.md) owns the editorial anti-slop quality ladder. This file adds *player-facing fun, NPC behaviour, empirical speech-style evidence and tests* only.
 
 ## Executive finding
 
@@ -18,7 +18,13 @@ The portfolio already understands actor IDs, memory, authored dialogue, systemic
 
 This is an **authoring and evaluation layer**, not a second Actor & Dialogue Core, writers' room, voice bible, seeded generator, rollout plan, or NPC naming registry. **Follow [WRITERS-ROOM.md](WRITERS-ROOM.md) for the creative governance, project voice bible templates and current phased implementation roadmap.** Use this addendum to ask whether their outputs are *playably fun, socially distinctive and recognisable by strangers*.
 
-## 1. Deduplication map: reuse these; do not rewrite them
+## 1. Deduplication and coverage: reuse existing work
+
+**Scope of the repository audit:** the accessible GitHub inventories under the connected personal and Parris Tech identities were searched for game/research projects. This addendum directly checked representative game READMEs and the research already catalogued in [YOUR-REPOS.md](YOUR-REPOS.md), including JoshRS, Energy Quest, Sigil Delve, Buckland Blocks, ASHFALLER, Lantern Road, Forbidden Quests, Marsh, Whirring Wilderness, SwordCoast, WILDY and The Undercity. It is **not** an exhaustive read of every source file, private local world, archived branch or non-game repository. Projects inspected only at root or through existing audit records remain **proposal-only**, not verified gameplay claims.
+
+**No competing toolchain:** [WRITERS-ROOM.md](WRITERS-ROOM.md) governs seeded premises, naming provenance and the rollout. [ANTI-SLOP.md](ANTI-SLOP.md) governs prose/editorial review and its existing quality gates. This document governs **NPC social behaviour, recognition and practical tests of fun**; it must not copy their templates, source tables or scoring rules.
+
+## 1.1 Existing canonical research
 
 | Already canonical | Existing source | What this addendum adds only |
 | --- | --- | --- |
@@ -26,7 +32,7 @@ This is an **authoring and evaluation layer**, not a second Actor & Dialogue Cor
 | Typed dialogue effects and conditions; authority boundaries | [RTD-009](https://github.com/joshualparris/JoshMemory/blob/main/repository-town/docs/RTD_009_DIALOGUE_SCHEMA_V1.md) | The author-facing **voice fingerprint** that sits above the validated dialogue contract |
 | 93-step dialogue implementation roadmap | [Skyrim NPC plan](https://github.com/joshualparris/JoshMemory/blob/main/repository-town/docs/SKYRIM_NPC_DIALOGUE_IMPLEMENTATION_TODO.md) | No new infrastructure roadmap; add a separate creative acceptance gate |
 | NPC callbacks, quest consequences and scene packs | [Lantern Road authored material](https://github.com/joshualparris/JoshMemory/tree/main/repository-town/games/lantern-road/story) | Voice diversity, story situations in conflict, and actual playtest discrimination |
-| Names, phonology, originality audit, collision registry and showrunner-led seeded tables | [AI-NAMING-AND-ORIGINALITY](AI-NAMING-AND-ORIGINALITY.md), [WRITERS-ROOM](WRITERS-ROOM.md), [data/name-commons.json](data/name-commons.json) | Diversity of **actions, moral dilemmas, speech acts and player activities**, *not* more name lists or another writing pipeline |
+| Names, phonology, originality audit, collision registry, showrunner-led seeded tables and anti-slop editorial gate | [AI-NAMING-AND-ORIGINALITY](AI-NAMING-AND-ORIGINALITY.md), [WRITERS-ROOM](WRITERS-ROOM.md), [ANTI-SLOP](ANTI-SLOP.md), [data/name-commons.json](data/name-commons.json) | Diversity of **actions, moral dilemmas, speech acts and player activities**, *not* more name lists, editorial lexicons or another writing pipeline |
 | World-shape, density, player autonomy, MDA and Flow | [REPORT](REPORT.md), [CHECKLIST](CHECKLIST.md) | A per-project **fun signature**, expectation calibration and distinctive failure modes |
 | Repo scorecards and shared technical core | [GAME-REPOS-AUDIT](GAME-REPOS-AUDIT.md) | New creative direction for projects not covered there, plus deliberately contrasting identities for closely related games |
 
@@ -163,6 +169,8 @@ TRUE AFTER FAILURE:      | FIRST RETURN LINE CONDITION:
 SAMPLE A: stranger       | SAMPLE B: trusted person
 SAMPLE C: under pressure | SAMPLE D: after being wrong
 ~~~
+
+**Follow [ANTI-SLOP.md](ANTI-SLOP.md) for a separate editorial quality review, not a second bespoke slop rubric.**
 
 **Voice is not accent cosplay.** A person's job, age, trust, losses, context and education shape their choices, not a fixed collection of catchphrases. Use real local language with care and never assume a protected characteristic from style.
 
