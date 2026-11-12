@@ -125,6 +125,44 @@ A private Dewey-style research catalogue was checked for related work. It is a *
 
 ---
 
+## AI naming, diversity and homogenization
+
+1. **Hamilton, S. & Mimno, D. (2026). *Elias in the Lighthouse, Again? Diagnosing Low Diversity in LLM Stories.***  
+   [arXiv:2605.26492](https://arxiv.org/abs/2605.26492)  
+   Used for: 20,000 stories, 11 words in 88.3%, Elias/Mara/Elara/lighthouse/keeper/clockmaker/librarian; preference data rather than pre-training frequency. **Grade A** (large empirical study), with the caveat that it studies English short fiction.
+
+2. **Mozo Quesada, A., Gálvez Rojas, S. & López Valverde, F. (2026). *Character-Name Concentration in LLM Fiction: Measuring Displacement and Mitigating Repetition.***  
+   [arXiv:2611.01284](https://arxiv.org/abs/2611.01284)  
+   Used for: 44,782 stories / 88,919 names; Slop Ratio; static banlists displace concentration and reduce real-name representation; speculative naming / SlopTracker reduces collision 7.3%→0.4%, within-story 4.3%→0.2%, naturalness 42–69%. **Grade A.**
+
+3. **Brzozowski, M. & Chung, N. C. (2026). *The Ghost Couple: Correlated LLM Name Priors and Their Haunting of the Web and Academic Publishing.***  
+   [arXiv:2606.02184](https://arxiv.org/abs/2606.02184)  
+   Used for: correlated ensembles/pairs/trios (Elena Vasquez + Marcus Chen + Amara Okafor; Aris Thorne + Lena Petrova; Elara Voss), model/version-specific priors. **Grade A for the phenomenon; the web-pollution findings are outside game design.**
+
+4. **Artificial Hivemind: The Open-Ended Homogeneity of Language Models (and Beyond).** NeurIPS 2025.  
+   [paper](https://papers.nips.cc/paper_files/paper/2025/file/754d5a526a5ee5a47220664a0eb92751-Paper-Datasets_and_Benchmarks_Track.pdf)  
+   Used for: semantic convergence even under high-temperature sampling; pairwise similarity ~0.80–0.90. **Grade A/B.**
+
+5. **Fu, T. et al. (2026). *Beyond the Hivemind: Escaping LLM Homogeneity via Meta-Persona Anchoring and Sequential Temperature Scaling.***  
+   [arXiv:2608.02618](https://arxiv.org/abs/2608.02618)  
+   Used for: meta-persona + filtered temperature scaling; similarity ~0.85→0.65. **Grade B/A** (preprint; ~20B open models).
+
+6. **Doshi, A. R. & Hauser, O. P. (2024). *Generative AI enhances individual creativity but reduces the collective diversity of novel content.*** Science Advances 10(28), eadn5290.  
+   [doi](https://doi.org/10.1126/sciadv.adn5290) · [UCL record](https://discovery.ucl.ac.uk/id/eprint/10195027/)  
+   Used for: individual creativity up, collective similarity up. **Grade A** (controlled experiment).
+
+7. **Shumailov, I. et al. (2024). *AI models collapse when trained on recursively generated data.*** Nature.  
+   [doi](https://doi.org/10.1038/s41586-024-07566-y)  
+   Used for: model collapse risk from recursive synthetic data; do not train on unfiltered AI output. **Grade A.**
+
+8. **Jwynia, *Character Naming: Breaking the Chen Proliferation.***  
+   [skill](https://github.com/jwynia/agent-skills/blob/main/skills/creative/fiction/character/character-naming/SKILL.md)  
+   Used for: external entropy, cast collision, cultural coherence, median-hopping; practical checklist. **Grade C** (practitioner heuristic, not a study), but useful and explicitly MIT-licensed.
+
+9. **Gizmodo, *Why Do Chatbots Keep Telling Stories About Someone Named ‘Elias Thorne’?***  
+   [article](https://gizmodo.com/why-do-chatbots-keep-telling-stories-about-someone-named-elias-thorne-2000770629)  
+   Used for: accessible summary of Hamilton & Mimno; journalistic framing. **Grade C** (secondary).
+
 ## Claim-to-source map
 
 | Claim | Sources |
@@ -143,6 +181,12 @@ A private Dewey-style research catalogue was checked for related work. It is a *
 | Density beats distance | Sasko; Undercity; Neathbound; 80.lv (counter-pressure) |
 | Environmental storytelling rewards inference | Jenkins; environmental storytelling glossary; Disco/RPS |
 | Player role/identity matters | Lantern Road dialogue framework; SDT; Disco |
+| LLM names concentrate (Elias/Mara/Elara) | Hamilton & Mimno; Mozo Quesada et al. |
+| Banlists displace rather than solve | Mozo Quesada et al. |
+| Correlated name ensembles | Brzozowski & Chung |
+| Temperature alone does not create diversity | Artificial Hivemind; Beyond the Hivemind |
+| Collective diversity falls even as individual quality rises | Doshi & Hauser |
+| External entropy + tracking beats prompts | Mozo Quesada et al.; Jwynia |
 
 ---
 

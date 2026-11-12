@@ -99,6 +99,7 @@ Scale: **0 absent · 1 placeholder · 2 functional · 3 solid · 4 strong · 5 r
 | **AI invents people/facts** | Astra (free-form), Repository Town (optional chat) | One contradiction destroys trust |
 | **Content scale outruns identity** | Undercity, Repository Town | Hundreds of units, few remembered people |
 | **No shared actor/dialogue layer** | every project | Each game rebuilds the same plumbing |
+| **A shared name commons** | Mira (Lantern/WILDY/Astra), Kael (dndgame/SwordCoast/StarHaven), Rowan/Tessa/Elira (Grey March) | The portfolio teaches the model its own defaults; see [AI-NAMING-AND-ORIGINALITY.md](AI-NAMING-AND-ORIGINALITY.md) |
 
 ---
 

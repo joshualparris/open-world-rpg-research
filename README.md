@@ -2,7 +2,7 @@
 
 **A source-grounded synthesis for large worlds, dense casts and conversations that matter.**
 
-Prepared 2026-11-12 · Desk research, not a playtest report. · Companion files: [REPORT.md](REPORT.md) · [YOUR-REPOS.md](YOUR-REPOS.md) · **[GAME-REPOS-AUDIT.md](GAME-REPOS-AUDIT.md)** (apply the framework to every game repo) · [CHECKLIST.md](CHECKLIST.md) · [SOURCES.md](SOURCES.md)
+Prepared 2026-11-12 · Desk research, not a playtest report. · Companion files: [REPORT.md](REPORT.md) · [YOUR-REPOS.md](YOUR-REPOS.md) · **[GAME-REPOS-AUDIT.md](GAME-REPOS-AUDIT.md)** (apply the framework to every game repo) · **[AI-NAMING-AND-ORIGINALITY.md](AI-NAMING-AND-ORIGINALITY.md)** (why names repeat, and how to fix it) · [NAMING-PLAYBOOK.md](NAMING-PLAYBOOK.md) · [CHECKLIST.md](CHECKLIST.md) · [SOURCES.md](SOURCES.md)
 
 ---
 
@@ -19,6 +19,20 @@ That is not the same as a large map or a large NPC count. The evidence points to
 5. **A legible player role** — the player knows who they are in the conversation and what their build, faction or background changes.
 
 The failure modes are equally consistent: **exploration anxiety**, **icon-checklist fatigue**, **information vending-machine NPCs**, **fake choices**, **lore dumps**, and **simulated people whose words do not match the world state**.
+
+---
+
+## Why the same names keep appearing
+
+“Mira” is not random. It sits at the intersection of three loops:
+
+- **Model prior:** LLM fiction concentrates on a small pool of safe, familiar names. In a 20,000-story study, **11 words appeared in 88.3% of stories** — including Elias, Mara and Elara, plus lighthouse/keeper/clockmaker/librarian.
+- **Alignment/typicality:** a small amount of preference data can disproportionately reshape output. The published “Elias the lighthouse keeper” pattern is the clearest example.
+- **Your local name commons:** Mira is already canonical in **Lantern Road**, **WILDY** and **Astra’s opening**; Kael recurs across dndgame/SwordCoast/StarHaven; Rowan/Tessa/Elira are shared Grey March canon. New generation sees the house style and continues it.
+
+Static banlists make this worse: they displace concentration to new names and can halve attested real-name representation. The better system is **external entropy + phonology + candidate sets + a name registry + corpus-level collision tracking**.
+
+Full report: [AI-NAMING-AND-ORIGINALITY.md](AI-NAMING-AND-ORIGINALITY.md) · practical prompts: [NAMING-PLAYBOOK.md](NAMING-PLAYBOOK.md) · audit tool: [`tools/name-audit.mjs`](tools/name-audit.mjs) · registry: [`data/name-commons.json`](data/name-commons.json).
 
 ---
 
@@ -282,6 +296,10 @@ WILDY is a small-scale case, not an open-world RPG, but the same rules apply:
 | --- | --- |
 | [REPORT.md](REPORT.md) | The long-form argument, evidence and design detail |
 | [GAME-REPOS-AUDIT.md](GAME-REPOS-AUDIT.md) | Repo-by-repo scorecard and prescriptions for the game portfolio |
+| [AI-NAMING-AND-ORIGINALITY.md](AI-NAMING-AND-ORIGINALITY.md) | Why LLM names/places/stories are generic, the evidence, and the fix |
+| [NAMING-PLAYBOOK.md](NAMING-PLAYBOOK.md) | Prompt pack, culture worksheet, selection rubric, metrics |
+| [tools/name-audit.mjs](tools/name-audit.mjs) | Dependency-free name concentration/cross-project audit |
+| [data/name-commons.json](data/name-commons.json) | Working name registry and collision decisions |
 | [YOUR-REPOS.md](YOUR-REPOS.md) | Audit of existing research across your repositories |
 | [CHECKLIST.md](CHECKLIST.md) | Practical design and playtest checklist |
 | [SOURCES.md](SOURCES.md) | Annotated bibliography and evidence quality |

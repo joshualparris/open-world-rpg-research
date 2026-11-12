@@ -1,0 +1,112 @@
+{
+  "updated": "2026-11-12",
+  "purpose": "Observed and proposed name ownership across Josh's game projects. This is a working registry, not a claim that every name is unique or intentional.",
+  "rules": [
+    "One core NPC name = one universe, unless the registry explicitly marks it as shared canon.",
+    "Reserve name+role pairs: a new mayor should not be another Rowan, a new innkeeper should not be another Tessa.",
+    "Run the name audit before adding a core NPC, place or faction.",
+    "Do not use a static banlist as the only control; track displaced names and cross-project reuse.",
+    "Prefer a culturally and phonologically grounded name over a familiar 'fantasy-safe' name.",
+    "Record provenance: human-authored, model-generated, or adapted, and who approved it."
+  ],
+  "names": [
+    {
+      "name": "Mira",
+      "projects": ["Lantern Road", "WILDY", "Astra"],
+      "roles": ["scout companion", "Keeper of Ember Camp", "opening NPC's daughter"],
+      "status": "conflict",
+      "decision": "Reserve Mira for Lantern Road unless the games are explicitly linked. Rename WILDY's Keeper and Astra's opening NPC, or make the shared-universe connection canonical."
+    },
+    {
+      "name": "Kael",
+      "projects": ["dndgame", "SwordCoast", "StarHaven"],
+      "roles": ["rogue / quickstep", "rogue / quickstep", "character"],
+      "status": "shared-code family",
+      "decision": "Treat dndgame and SwordCoast as one code family; rename Kael if StarHaven is a separate universe."
+    },
+    {
+      "name": "Rowan",
+      "projects": ["Repository Town", "Lantern Road", "Grey March / Marsh"],
+      "roles": ["town resident", "Mayor of Hearthwick", "Mayor of Hearthwick"],
+      "status": "shared Grey March canon",
+      "decision": "Keep Rowan Pike as the Grey March mayor. Do not reuse the name+mayor pairing in a new universe; use a different name or explicitly link the setting."
+    },
+    {
+      "name": "Tessa",
+      "projects": ["Lantern Road", "Grey March / Marsh"],
+      "roles": ["innkeeper", "innkeeper"],
+      "status": "shared Grey March canon",
+      "decision": "Keep Tessa Reed as the Grey March innkeeper. Do not create another innkeeper named Tessa."
+    },
+    {
+      "name": "Elira",
+      "projects": ["Lantern Road", "Grey March / Marsh"],
+      "roles": ["Road Priest", "Road Priest"],
+      "status": "shared Grey March canon",
+      "decision": "Keep Sister Elira as the Grey March priest. Treat as a shared-setting character, not a generic name."
+    },
+    {
+      "name": "Lyra",
+      "projects": ["Repository Town"],
+      "roles": ["voiced actor / bard-adjacent"],
+      "status": "reserved",
+      "decision": "Avoid using Lyra for a new musician or bard; it is already a voiced character in Repository Town."
+    },
+    {
+      "name": "Thorne",
+      "projects": ["Schism"],
+      "roles": ["surname / faction-adjacent"],
+      "status": "reserved",
+      "decision": "Avoid using Thorne as a shortcut villain surname; it is already part of Schism’s naming field."
+    },
+    {
+      "name": "Bran",
+      "projects": ["WILDY"],
+      "roles": ["woodsman"],
+      "status": "owned",
+      "decision": "WILDY-only. Do not reuse the name+woodsman pairing elsewhere."
+    },
+    {
+      "name": "Sable",
+      "projects": ["WILDY"],
+      "roles": ["scavenger"],
+      "status": "owned",
+      "decision": "WILDY-only. Do not reuse for a new rogue/scavenger."
+    },
+    {
+      "name": "Elara",
+      "projects": [],
+      "roles": ["model-prior watchlist"],
+      "status": "watchlist",
+      "decision": "Do not add to canon without a specific cultural/phonological reason; a top LLM-default name."
+    },
+    {
+      "name": "Elias",
+      "projects": [],
+      "roles": ["model-prior watchlist"],
+      "status": "watchlist",
+      "decision": "Do not add to canon without a specific cultural/phonological reason; a top LLM-default name."
+    },
+    {
+      "name": "Mara",
+      "projects": [],
+      "roles": ["model-prior watchlist"],
+      "status": "watchlist",
+      "decision": "Do not add to canon without a specific cultural/phonological reason; a top LLM-default name."
+    },
+    {
+      "name": "Aria",
+      "projects": [],
+      "roles": ["model-prior watchlist"],
+      "status": "watchlist",
+      "decision": "Often used as a generic 'musical/mysterious' name; require a concrete cultural source."
+    },
+    {
+      "name": "Seraphina",
+      "projects": [],
+      "roles": ["model-prior watchlist"],
+      "status": "watchlist",
+      "decision": "High-prior fantasy name; avoid unless the phonology and culture justify it."
+    }
+  ]
+}
