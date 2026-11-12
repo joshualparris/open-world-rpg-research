@@ -1,0 +1,42 @@
+{
+  "universe": "example-universe",
+  "showrunner": "human-owner",
+  "updated": "2026-11-12",
+  "names": [
+    {
+      "id": "ald",
+      "value": "Aldis",
+      "kind": "person",
+      "culture": "grey-march",
+      "role": "ferryman",
+      "status": "owned",
+      "source": "table:names.grey-march",
+      "seed": "example-001",
+      "firstUse": "example-scene-01",
+      "notes": "No role+name reuse outside this universe."
+    }
+  ],
+  "places": [
+    {
+      "id": "gallows",
+      "value": "Gallowsfoot",
+      "kind": "ford",
+      "culture": "grey-march",
+      "status": "owned",
+      "source": "table:places.grey-march",
+      "seed": "example-001",
+      "etymology": "The ford where executions were held.",
+      "firstUse": "example-scene-02"
+    }
+  ],
+  "reservedRolePairs": [
+    { "name": "Mira", "role": "keeper", "universe": "lantern-road", "status": "reserved" },
+    { "name": "Rowan", "role": "mayor", "universe": "grey-march", "status": "shared-canon" }
+  ],
+  "rules": [
+    "No core name may cross universes unless status is shared-canon.",
+    "No name+role pair may repeat across universes.",
+    "Every core name needs a source (table draw, human, or adaptation) and a seed.",
+    "The model may propose, but the showrunner approves."
+  ]
+}

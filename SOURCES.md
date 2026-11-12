@@ -163,6 +163,35 @@ A private Dewey-style research catalogue was checked for related work. It is a *
    [article](https://gizmodo.com/why-do-chatbots-keep-telling-stories-about-someone-named-elias-thorne-2000770629)  
    Used for: accessible summary of Hamilton & Mimno; journalistic framing. **Grade C** (secondary).
 
+## Writers’ room, voice and generation methods
+
+1. **Showrunner.** Wikipedia. [link](https://en.wikipedia.org/wiki/Showrunner)  
+   Used for: showrunner as top creative authority/head writer, tone and final cut. **Grade B** (reference overview).
+
+2. **Writers’ room.** Wikipedia. [link](https://en.wikipedia.org/wiki/Writers%27_room)  
+   Used for: room sizes 2–30, no single formula, UK single-writer/voice-driven tradition, criticisms. **Grade B.**
+
+3. **Bible (screenwriting).** Wikipedia. [link](https://en.wikipedia.org/wiki/Bible_%28screenwriting%29)  
+   Used for: story bible, continuity, “walking bibles.” **Grade B.**
+
+4. **Languages constructed by Tolkien.** Wikipedia. [link](https://en.wikipedia.org/wiki/Languages_constructed_by_Tolkien)  
+   Used for: glossopoeia, language families, Tolkien’s “a name comes first and the story follows.” **Grade B** (reference; primary quote).
+
+5. **George R. R. Martin / Star Wars / Steven Moffat.** Wikipedia overviews. [Martin](https://en.wikipedia.org/wiki/George_R._R._Martin) · [Star Wars](https://en.wikipedia.org/wiki/Star_Wars) · [Moffat](https://en.wikipedia.org/wiki/Steven_Moffat)  
+   Used for: background; the voice/naming analysis is interpretive craft reading, not a controlled study. **Grade C** for style claims.
+
+6. **Zhang, J. et al. (2025/2026). *Verbalized Sampling: How to Mitigate Mode Collapse and Unlock LLM Diversity.*** [arXiv:2510.01171](https://arxiv.org/abs/2510.01171)  
+   Used for: 1.6–2.1× diversity in creative writing; probability-verbalized candidate sets. **Grade A.**
+
+7. **Zhao, M., Du, Y. & Wang, M. (2026). *Large Language Models Are Bad Dice Players.*** ACL 2026. [link](https://aclanthology.org/2026.acl-long.1051/)  
+   Used for: LLMs lack a functional internal sampler; 7% median pass rate in batch, 10/11 models pass no distribution in independent requests; external RNG needed. **Grade A.**
+
+8. **Nguyen, M. et al. (2025). *Turning Up the Heat: Min-p Sampling for Creative and Coherent LLM Outputs.*** ICLR 2025. [link](https://proceedings.iclr.cc/paper_files/paper/2025/hash/afa5f124e36bed5cc2125067005d43f5-Abstract-Conference.html)  
+   Used for: min-p; caveat: contested by later critical analysis. **Grade B/A.**
+
+9. **Roush, A. & Mahajani, P. (2026). *Anti-slopping: An innovation for rectifying LLM writing clichés.*** Thoughtworks. [link](https://research.thoughtworks.com/library/anti-slopping-an-innovation-for-rectifying-llm-writing-cliches)  
+   Used for: anti-slop sampler, 69–96% throughput cost at 1k–8k patterns, logit access required. **Grade B** (practitioner/research lab).
+
 ## Claim-to-source map
 
 | Claim | Sources |
@@ -187,6 +216,12 @@ A private Dewey-style research catalogue was checked for related work. It is a *
 | Temperature alone does not create diversity | Artificial Hivemind; Beyond the Hivemind |
 | Collective diversity falls even as individual quality rises | Doshi & Hauser |
 | External entropy + tracking beats prompts | Mozo Quesada et al.; Jwynia |
+| Voice/style per repo beats pure random | Showrunner/writers’ room sources; author analysis (interpretive) |
+| A small showrunner-led room beats a large committee | Writers’ room; Showrunner |
+| LLMs cannot reliably sample from distributions | Zhao et al. |
+| Verbalized Sampling increases diversity 1.6–2.1× | Zhang et al. |
+| Min-p/anti-slop need logits and have costs | Nguyen et al.; Roush & Mahajani |
+| Seeded tables + fixed facts are the right division of labour | Synthesis; Zhao et al.; Mozo Quesada et al. |
 
 ---
 

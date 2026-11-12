@@ -1,0 +1,88 @@
+{
+  "meta": {
+    "name": "Example writer's-room tables",
+    "note": "Replace every value with curated, culture-specific material. Tables are canon inputs, not prompts. Keep one file per universe or culture.",
+    "version": "1"
+  },
+  "tables": {
+    "names": [
+      { "id": "ald", "value": "Aldis", "weight": 1, "tags": { "culture": "grey-march", "register": "common" } },
+      { "id": "ber", "value": "Berrin", "weight": 1, "tags": { "culture": "grey-march", "register": "common" } },
+      { "id": "dagn", "value": "Dagna", "weight": 1, "tags": { "culture": "grey-march", "register": "common" } },
+      { "id": "hest", "value": "Hesta", "weight": 1, "tags": { "culture": "grey-march", "register": "ritual" } },
+      { "id": "osw", "value": "Oswin", "weight": 1, "tags": { "culture": "grey-march", "register": "formal" } },
+      { "id": "cler", "value": "Clera", "weight": 1, "tags": { "culture": "under-city", "register": "common" } },
+      { "id": "dross", "value": "Dross", "weight": 1, "tags": { "culture": "under-city", "register": "nickname" } },
+      { "id": "ferr", "value": "Ferrick", "weight": 1, "tags": { "culture": "under-city", "register": "formal" } },
+      { "id": "marn", "value": "Marn", "weight": 1, "tags": { "culture": "under-city", "register": "common" } },
+      { "id": "sisk", "value": "Sisk", "weight": 1, "tags": { "culture": "under-city", "register": "nickname" } }
+    ],
+    "places": [
+      { "id": "gallows", "value": "Gallowsfoot", "weight": 1, "tags": { "culture": "grey-march", "kind": "ford" } },
+      { "id": "dewline", "value": "The Dew Line", "weight": 1, "tags": { "culture": "grey-march", "kind": "border" } },
+      { "id": "ninebell", "value": "Ninebell", "weight": 1, "tags": { "culture": "grey-march", "kind": "village" } },
+      { "id": "ostler", "value": "Ostler's Rest", "weight": 1, "tags": { "culture": "grey-march", "kind": "inn" } },
+      { "id": "sink", "value": "The Sink", "weight": 1, "tags": { "culture": "under-city", "kind": "mine" } },
+      { "id": "saltrow", "value": "Saltrow", "weight": 1, "tags": { "culture": "under-city", "kind": "market" } },
+      { "id": "kettle", "value": "Kettlewick", "weight": 1, "tags": { "culture": "grey-march", "kind": "hamlet" } },
+      { "id": "brine", "value": "Brine Stair", "weight": 1, "tags": { "culture": "under-city", "kind": "street" } }
+    ],
+    "trades": [
+      { "id": "ledger", "value": "ledger clerk", "weight": 1, "tags": { "class": "formal" } },
+      { "id": "ferry", "value": "ferryman", "weight": 1, "tags": { "class": "working" } },
+      { "id": "salt", "value": "salt factor", "weight": 1, "tags": { "class": "merchant" } },
+      { "id": "bell", "value": "bell founder", "weight": 1, "tags": { "class": "artisan" } },
+      { "id": "tanner", "value": "tanner", "weight": 1, "tags": { "class": "working" } },
+      { "id": "lamp", "value": "lamplighter", "weight": 1, "tags": { "class": "working" } },
+      { "id": "quarry", "value": "quarry foreman", "weight": 1, "tags": { "class": "working" } },
+      { "id": "rag", "value": "rag sorter", "weight": 1, "tags": { "class": "working" } },
+      { "id": "lock", "value": "canal lock keeper", "weight": 1, "tags": { "class": "working" } },
+      { "id": "tooth", "value": "itinerant tooth-drawer", "weight": 1, "tags": { "class": "outsider" } }
+    ],
+    "quirks": [
+      { "id": "exits", "value": "counts exits before sitting down", "weight": 1, "tags": { "tone": "watchful" } },
+      { "id": "regs", "value": "quotes regulations from memory, wrongly", "weight": 1, "tags": { "tone": "comic" } },
+      { "id": "furniture", "value": "apologizes to furniture", "weight": 1, "tags": { "tone": "gentle" } },
+      { "id": "debts", "value": "collects bad debts as stories", "weight": 1, "tags": { "tone": "wry" } },
+      { "id": "names", "value": "renames people after their jobs", "weight": 1, "tags": { "tone": "imperious" } },
+      { "id": "rain", "value": "refuses to discuss anything while it rains", "weight": 1, "tags": { "tone": "superstitious" } },
+      { "id": "tea", "value": "makes tea for enemies before negotiations", "weight": 1, "tags": { "tone": "controlled" } },
+      { "id": "ledger", "value": "keeps a private ledger of favours", "weight": 1, "tags": { "tone": "calculating" } }
+    ],
+    "premises": {
+      "institution": [
+        { "id": "water-court", "value": "a water court", "weight": 1 },
+        { "id": "ferry-schedule", "value": "a ferry schedule", "weight": 1 },
+        { "id": "funeral-debt", "value": "a funeral debt", "weight": 1 },
+        { "id": "guild-audit", "value": "a guild audit", "weight": 1 },
+        { "id": "border-survey", "value": "a border survey", "weight": 1 },
+        { "id": "salt-tax", "value": "a salt tax", "weight": 1 }
+      ],
+      "pressure": [
+        { "id": "rent", "value": "rent is due", "weight": 1 },
+        { "id": "drought", "value": "the wells are failing", "weight": 1 },
+        { "id": "strike", "value": "the workers have stopped", "weight": 1 },
+        { "id": "quarantine", "value": "the road is quarantined", "weight": 1 },
+        { "id": "inheritance", "value": "an inheritance is contested", "weight": 1 }
+      ],
+      "relationship": [
+        { "id": "siblings", "value": "two siblings", "weight": 1 },
+        { "id": "rivals", "value": "two rivals", "weight": 1 },
+        { "id": "ex-lovers", "value": "former lovers", "weight": 1 },
+        { "id": "mentor", "value": "a mentor and student", "weight": 1 }
+      ],
+      "object": [
+        { "id": "ledger", "value": "a ledger with one page missing", "weight": 1 },
+        { "id": "token", "value": "a ferry token", "weight": 1 },
+        { "id": "bell", "value": "a cracked bell", "weight": 1 },
+        { "id": "deed", "value": "a deed with two names", "weight": 1 }
+      ],
+      "complication": [
+        { "id": "wrong-person", "value": "the obvious culprit is protecting someone else", "weight": 1 },
+        { "id": "cost", "value": "the fair solution ruins the person who asked for help", "weight": 1 },
+        { "id": "witness", "value": "the only witness is the person who benefits", "weight": 1 },
+        { "id": "law", "value": "the law is on the wrong side", "weight": 1 }
+      ]
+    }
+  }
+}

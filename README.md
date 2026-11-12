@@ -2,7 +2,7 @@
 
 **A source-grounded synthesis for large worlds, dense casts and conversations that matter.**
 
-Prepared 2026-11-12 · Desk research, not a playtest report. · Companion files: [REPORT.md](REPORT.md) · [YOUR-REPOS.md](YOUR-REPOS.md) · **[GAME-REPOS-AUDIT.md](GAME-REPOS-AUDIT.md)** (apply the framework to every game repo) · **[AI-NAMING-AND-ORIGINALITY.md](AI-NAMING-AND-ORIGINALITY.md)** (why names repeat, and how to fix it) · [NAMING-PLAYBOOK.md](NAMING-PLAYBOOK.md) · [CHECKLIST.md](CHECKLIST.md) · [SOURCES.md](SOURCES.md)
+Prepared 2026-11-12 · Desk research, not a playtest report. · Companion files: [REPORT.md](REPORT.md) · [YOUR-REPOS.md](YOUR-REPOS.md) · **[GAME-REPOS-AUDIT.md](GAME-REPOS-AUDIT.md)** (apply the framework to every game repo) · **[AI-NAMING-AND-ORIGINALITY.md](AI-NAMING-AND-ORIGINALITY.md)** (why names repeat, and how to fix it) · **[WRITERS-ROOM.md](WRITERS-ROOM.md)** (showrunner-led voice + seeded tables + roadmap) · [NAMING-PLAYBOOK.md](NAMING-PLAYBOOK.md) · [CHECKLIST.md](CHECKLIST.md) · [SOURCES.md](SOURCES.md)
 
 ---
 
@@ -33,6 +33,25 @@ The failure modes are equally consistent: **exploration anxiety**, **icon-checkl
 Static banlists make this worse: they displace concentration to new names and can halve attested real-name representation. The better system is **external entropy + phonology + candidate sets + a name registry + corpus-level collision tracking**.
 
 Full report: [AI-NAMING-AND-ORIGINALITY.md](AI-NAMING-AND-ORIGINALITY.md) · practical prompts: [NAMING-PLAYBOOK.md](NAMING-PLAYBOOK.md) · audit tool: [`tools/name-audit.mjs`](tools/name-audit.mjs) · registry: [`data/name-commons.json`](data/name-commons.json).
+
+---
+
+## From names to a writers’ room
+
+The better model is not “random names.” It is **one showrunner-led voice per repo**, with seeded tables supplying fixed facts:
+
+> **The room is the governance model. Seeded tables are the entropy. The registry is the memory. The human showrunner is the taste.**
+
+- A **one-page voice bible** defines what the game notices, cuts, sounds like and refuses to explain.
+- A **small room** (showrunner + worldbuilder + character lead + dialogist + continuity editor) gives friction without committee blandness.
+- **Curated tables** provide names, places, trades, quirks and premise axes.
+- **Seeded code draws** choose the facts; the model receives them as fixed canon and writes only prose/dialogue.
+- **10–20 candidates with probabilities** (Verbalized Sampling) increase variety, but selection is **fit-filtered**, not “pick the weirdest.”
+- **Registry + CI + human sign-off** keep canon coherent across repos.
+
+Research verdict and full numbered rollout: [WRITERS-ROOM.md](WRITERS-ROOM.md) · copyable kit: [`templates/writers-room/`](templates/writers-room/) · seeded drawer: [`tools/table-draw.mjs`](tools/table-draw.mjs).
+
+The research supports your core instinct: a distinctive voice beats random. The correction is that **voice without entropy becomes pastiche**, and **entropy without voice becomes noise**. Use both, under a showrunner.
 
 ---
 
@@ -298,6 +317,9 @@ WILDY is a small-scale case, not an open-world RPG, but the same rules apply:
 | [GAME-REPOS-AUDIT.md](GAME-REPOS-AUDIT.md) | Repo-by-repo scorecard and prescriptions for the game portfolio |
 | [AI-NAMING-AND-ORIGINALITY.md](AI-NAMING-AND-ORIGINALITY.md) | Why LLM names/places/stories are generic, the evidence, and the fix |
 | [NAMING-PLAYBOOK.md](NAMING-PLAYBOOK.md) | Prompt pack, culture worksheet, selection rubric, metrics |
+| [WRITERS-ROOM.md](WRITERS-ROOM.md) | Showrunner-led voice, tables, seeded draws, numbered repo rollout |
+| [templates/writers-room/](templates/writers-room/) | Copyable voice bible, tables, registry, prompts, audit |
+| [tools/table-draw.mjs](tools/table-draw.mjs) | Deterministic seeded table drawer for fixed facts |
 | [tools/name-audit.mjs](tools/name-audit.mjs) | Dependency-free name concentration/cross-project audit |
 | [data/name-commons.json](data/name-commons.json) | Working name registry and collision decisions |
 | [YOUR-REPOS.md](YOUR-REPOS.md) | Audit of existing research across your repositories |
