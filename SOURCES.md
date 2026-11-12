@@ -119,6 +119,28 @@ These are public repos unless noted. They are evidence of **design intent and en
 | [WILDY DESIGN](https://github.com/joshualparris/RunescapeFedoraCrashDoctor/blob/main/DESIGN.md) | Implemented small-scale exploration/arena design | A (implemented/tested) |
 | WILDY README / tests | Live game and 22 tests | A |
 
+**Second pass (2026-11-12).** Grades use the scale above: A means the document is a primary design record or tested artefact *of what the author decided or did*, not proof of what players enjoy. The addendum uses a finer scale (A observed/tested, B audit or contract, C design intent, D wishlist); roughly its A-C map to A here and its D to B/C.
+
+| Source | Role | Grade |
+| --- | --- | --- |
+| [RTD-003 cast inventory](https://github.com/joshualparris/JoshMemory/blob/main/repository-town/docs/RTD_003_NPC_CAST_INVENTORY_2026-10-24.md) | 32 named / 99 simulated / 188 house slots / 319 identity keys; supersedes the 38-villager figure | A (source audit with regression test) |
+| [RTD-004 dialogue audit](https://github.com/joshualparris/JoshMemory/blob/main/repository-town/docs/RTD_004_DIALOGUE_SYSTEM_AUDIT_2026-10-24.md) | Three dialogue UIs, yarns, voice-honesty rules | A (source audit; no runtime claim) |
+| [RTN NPC identity and crowds](https://github.com/joshualparris/JoshMemory/blob/main/repository-town/docs/RTN_NPC_CROWD_FALLBACK_TRIAGE_2026-10-25.md) | Visual identity, spacing, swept collision | A for source work; hosted/mobile sign-off open |
+| [Playtest 19 Oct](https://github.com/joshualparris/JoshMemory/blob/main/repository-town/PLAYTEST_2026-10-19.md), [Playtest 29 Oct](https://github.com/joshualparris/JoshMemory/blob/main/repository-town/PLAYTEST_2026-10-29.md) | Browser playtest and fixes (cashier with no stock, residents in wrong room) | A for fixed bugs (tests fail before, pass after); not a player study |
+| [Occupations](https://github.com/joshualparris/JoshMemory/blob/main/repository-town/docs/OCCUPATIONS_PLAYTEST.md) | Job loops, forgiving failure, certificates, escrow | A for design and automated checks; human acceptance pending |
+| [Lantern Road choice grammar](https://github.com/joshualparris/JoshMemory/blob/main/repository-town/games/lantern-road/story/dialogue/DIALOGUE-CHOICE-GRAMMAR.md) | 11 choice intents; "would a different option change anything" test | A (authoring) |
+| [Companion autonomy spec](https://github.com/joshualparris/JoshMemory/blob/main/repository-town/games/lantern-road/systems/companions/COMPANION-WILLINGNESS-AUTONOMY-SPEC.md) | "Persuadable, not programmable" | A (design spec; runtime later) |
+| [Elodin game hooks](https://github.com/joshualparris/JoshMemory/blob/main/repository-town/games/elodin-deep-lore/ELODIN_GAME_HOOKS.md) | Voice rules, five-act NPC arc, question economy; derived from published fiction | B (design notes; keep private) |
+| [SylviePhonetics QA](https://github.com/joshualparris/JoshMemory/blob/main/repository-town/games/sylvie-phonetics/QA-Recommendations.md), [research roadmap](https://github.com/joshualparris/JoshMemory/blob/main/repository-town/games/sylvie-phonetics/docs/ResearchImplementationRoadmap.md), [Sleepy QA](https://github.com/joshualparris/JoshMemory/blob/main/repository-town/games/sleepy/QA-Recommendations.md) | Child-audience design rules | B (secondary: the underlying research file is not in any repo) |
+| [AIDungeonMaster gaps](https://github.com/parristechservices-prog/AIDungeonMaster/blob/main/docs/ai-dm-app-gaps-and-next-steps.md), [open-threads](https://github.com/parristechservices-prog/AIDungeonMaster/blob/main/docs/open-threads.md), [grounded QA](https://github.com/parristechservices-prog/AIDungeonMaster/blob/main/docs/qa-grounded-dm-report.md) | Hybrid engine+LLM, fun proxies, persistent-NPC milestone | A (planning, partly historical; its own header flags parts as outdated) |
+| [Kingkiller plan v1.1](https://github.com/Parris-Tech-Services/kkc-adventure/blob/master/RothfussGameDocs/KINGKILLER%20CHRONICLE%20TEXT%20ADVENTURE%20v1.1%20planning%20Doc.docx), [_Improvements](https://github.com/Parris-Tech-Services/kkc-adventure/blob/master/RothfussGameDocs/_Improvements.docx) | NPC template, conversation moves, scope cuts; rights gate | A (planning); fan project, keep private |
+| [campaign-copilot: Briarwick (Keeper edition)](https://github.com/Parris-Tech-Services/campaign-copilot/blob/main/docs/adventures/MOTW_THE_LAST_LAUGH_OF_BRIARWICK_KEEPER.md) | Original mystery with explicit fun technique | B (design; no recorded table run) |
+| [JoshRS quest matrix](https://github.com/Parris-Tech-Services/joshrs/blob/main/docs/QUEST_MATRIX.md), [completeness audit](https://github.com/Parris-Tech-Services/joshrs/blob/main/docs/377_OPEN_SOURCE_GAMEPLAY_COMPLETENESS_AUDIT_2026-10-31.md), [MMO checklist](https://github.com/Parris-Tech-Services/joshrs/blob/main/docs/FULL_CLASSIC_MMO_CHECKLIST.md), [Play with Sylvie](https://github.com/Parris-Tech-Services/joshrs/blob/main/docs/PLAY_WITH_SYLVIE.md) | Honest quest state; "journal is not playable"; family LAN | A (generated matrix and audit) |
+| [3layers GDD](https://github.com/Parris-Tech-Services/3layers/blob/main/Epic-Quest-Saga/docs/01-product/game-design-document.md), [pillars](https://github.com/Parris-Tech-Services/3layers/blob/main/Epic-Quest-Saga/docs/01-product/vision-and-pillars.md) | Fact-provenance tags; layer separation | A (design) |
+| [Bramblewick architecture](https://github.com/Parris-Tech-Services/bramblewick/blob/main/ARCHITECTURE.md) | Event-driven quests; NPC schema with `schedule` | A (implemented) |
+| [Aetheria Improvements](https://github.com/Parris-Tech-Services/Aetheria/blob/main/Improvements.md), [Whirring Wilderness roadmap](https://github.com/Parris-Tech-Services/WhirringWilderness/blob/main/docs/AAA_INDIE_ROADMAP.md) | Prioritisation; NPC-depth targets | C (planning and pasted advice) |
+| [JoshHub-Local Neverwinter wishlist](https://github.com/Parris-Tech-Services/JoshHub-Local/blob/main/Game-Fixer/attached_assets/Pasted--Neverwinter-RPG-Dramatic-Enhancement-Request-CONTEXT-T_1770553320874.txt) | "50+ NPCs" wishlist; used as a contrast | C (wishlist) |
+
 ### Private catalogue
 
 A private Dewey-style research catalogue was checked for related work. It is a **catalogue**, not a source repository. A title-level pointer to a narrative-RPG design document exists, but the underlying document was not accessible without authentication, and no private content is reproduced or linked here. A related private catalogue frontend was not an additional evidence source.
@@ -143,6 +165,13 @@ A private Dewey-style research catalogue was checked for related work. It is a *
 | Density beats distance | Sasko; Undercity; Neathbound; 80.lv (counter-pressure) |
 | Environmental storytelling rewards inference | Jenkins; environmental storytelling glossary; Disco/RPS |
 | Player role/identity matters | Lantern Road dialogue framework; SDT; Disco |
+| Prove fun in a small slice before the epic (second pass) | AIDungeonMaster; Kingkiller plan; Aetheria; Whirring Wilderness; Bramblewick |
+| NPC with a role but no verb is worse than none (second pass) | Playtest 29 Oct (Corner Grocer; staff with nothing to do) |
+| Dialogue needs one controller and one identity policy (second pass) | RTD-003; RTD-004 |
+| Conversations as closed moves, not trees or free text (second pass) | Kingkiller plan 8.3; Lantern Road choice grammar |
+| Scarcity gives conversation weight (second pass) | Elodin hooks (question economy); companion autonomy spec |
+| Child-audience fun: short sessions, scaffolded feedback, no variable-ratio rewards (second pass) | SylviePhonetics QA and roadmap; Sleepy QA |
+| "Content present" is not "content playable" (second pass) | JoshRS quest matrix and completeness audit; Playtest 19 Oct |
 
 ---
 
@@ -152,7 +181,7 @@ A private Dewey-style research catalogue was checked for related work. It is a *
 - **Survivorship bias.** The games discussed are mostly successful; failed open worlds are less documented.
 - **Practitioner claims.** GDC talks describe what worked for one team, not universal laws.
 - **Source summary chain.** Some articles summarise talks; details may be compressed or lost. Where possible, the GDC talk itself is linked.
-- **Snapshot counts.** Repository Town's 258/32/38/188 figures are from an audit snapshot; the project has changed since.
+- **Snapshot counts.** Repository Town's 258/32/38/188 figures are from an audit snapshot; the project has changed since. The 24 Oct cast inventory (RTD-003) counts 99 simulated workers, i.e. 319 identity slots; see [MORE-FROM-YOUR-REPOS.md](MORE-FROM-YOUR-REPOS.md) section 1.
 - **Private material.** No private correspondence, credentials or Drive contents were used. Private catalogue metadata is not reproduced.
 - **Quotes.** Short quotes are attributed for criticism/commentary; full texts remain with their owners.
 

@@ -2,6 +2,9 @@
 
 **Scope:** a GitHub-wide code search across `joshualparris` and `Parris-Tech-Services`, a check of a private Dewey-style research catalogue, and a close read of 15+ public design/engineering documents. This is an inventory of **existing research and design notes**, not a claim that every proposal is implemented.
 
+
+> **Update, 2026-11-12:** a second pass over about 120 local clones found more relevant material (AIDungeonMaster, the Kingkiller adventure, campaign-copilot, JoshRS, 3layers, Bramblewick, Repository Town playtests and more) and **one correction**: the 24 Oct cast inventory ([RTD-003](https://github.com/joshualparris/JoshMemory/blob/main/repository-town/docs/RTD_003_NPC_CAST_INVENTORY_2026-10-24.md)) counts **99** simulated workers, not 38, giving **319** identity slots rather than 258. Everything below is unchanged; see [MORE-FROM-YOUR-REPOS.md](MORE-FROM-YOUR-REPOS.md).
+
 ---
 
 ## 1. What was searched

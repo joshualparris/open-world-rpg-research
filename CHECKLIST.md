@@ -287,4 +287,52 @@ For each core/recurring NPC:
 
 ---
 
+## 13. Additions from your repositories (second pass)
+
+Each item names the finding in [MORE-FROM-YOUR-REPOS.md](MORE-FROM-YOUR-REPOS.md) it comes from.
+
+**Scope and proof (N1-N3)**
+- [ ] A stranger can play 30 minutes of the slice and wants the next 30.
+- [ ] The slice has three fully modelled NPCs before an NPC #4 is added.
+- [ ] With the model switched off, every quest, price, location and relationship still resolves.
+- [ ] Every NPC and quest has a *generated* status: authored / wired / playable / human-verified.
+- [ ] Facts NPCs assert carry provenance (source, table, inferred, unresolved).
+
+**NPC design (N4-N8)**
+- [ ] Each major NPC records public / private / unknown knowledge, taboo topics, exit conditions, tone-change triggers and what they notice first.
+- [ ] Each NPC has stated limitations (what they cannot do or know).
+- [ ] The most important NPC changes *role* across the game (obstacle, teacher, warning, ally, measure), not just a trust number.
+- [ ] Every visible NPC role has a player verb and a world rule that makes it true (cashier at the till; stove in the kitchen).
+- [ ] No building shows staff with nothing to do; either add one verb or hide the staff until the interior exists.
+- [ ] Named characters, workers and generated residents share one dialogue controller and one identity policy.
+- [ ] NPC-to-NPC conversations feed what NPCs can tell the player (rumours), with provenance.
+- [ ] Device or AI speech is never presented as a recording.
+- [ ] At the player's actual screen size, three NPCs can be told apart without reading names.
+- [ ] NPC bodies never overlap or tunnel; no simulation actor is removed to make a crowd look tidy.
+
+**Conversation (N9-N10)**
+- [ ] Conversations are built from a closed set of moves (intent x topic x tone) the engine can evaluate.
+- [ ] Each node passes the "would a different option change anything?" test (information, relationship, commitment, availability, tone, action, interpretation).
+- [ ] Repeat use of a question becomes a follow-up, not the same question.
+- [ ] There is something scarce in a conversation (a question, attention, authority, time) and a cost to spending it badly.
+- [ ] Companions can accept, accept reluctantly, counter-offer, refuse, volunteer or warn; high trust does not mean obedience.
+
+**Audience and table fun (N11-N12)**
+- [ ] A session ends on purpose, with a closing moment, not by running out of content.
+- [ ] Failure feedback offers a hint, a model and a retry; no bare "no" or red X.
+- [ ] Rewards recognise completion or story, not a variable-ratio drip.
+- [ ] Family or co-play prompts appear in the game itself.
+- [ ] The key truth is reachable by at least two independent clues; no single roll gates it.
+- [ ] Player answers from setup are reused later.
+- [ ] There is an "appeal" or undo path for one bad ruling.
+- [ ] A cold-start path shows a new player what to do in the first five minutes.
+
+**Work and honesty (N13)**
+- [ ] Mistakes in jobs or chores cost rework, not lost pay; progress is recognised by people (certificates, offers).
+- [ ] Exploit checks exist: no infinite money, no duplicate XP, no double payment on repeat.
+- [ ] Reports say "NOT a graphical playtest" or "needs human/device acceptance" wherever that is true.
+- [ ] Wishlist counts (NPCs, quests) are checked against the depth template before they become targets.
+
+---
+
 *If most answers are “yes,” the world and cast are probably doing the hard work. If not, start with presence and density before adding more map or more NPCs.*

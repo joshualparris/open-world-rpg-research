@@ -2,7 +2,7 @@
 
 **A source-grounded synthesis for large worlds, dense casts and conversations that matter.**
 
-Prepared 2026-11-12 · Desk research, not a playtest report. · Companion files: [REPORT.md](REPORT.md) · [YOUR-REPOS.md](YOUR-REPOS.md) · [CHECKLIST.md](CHECKLIST.md) · [SOURCES.md](SOURCES.md)
+Prepared 2026-11-12 · Desk research, not a playtest report. · Companion files: [REPORT.md](REPORT.md) · [YOUR-REPOS.md](YOUR-REPOS.md) · [MORE-FROM-YOUR-REPOS.md](MORE-FROM-YOUR-REPOS.md) · [CHECKLIST.md](CHECKLIST.md) · [SOURCES.md](SOURCES.md)
 
 ---
 
@@ -188,6 +188,21 @@ A full audit is in [YOUR-REPOS.md](YOUR-REPOS.md). The short version:
 
 ---
 
+## Second pass: more from your repositories
+
+A second search of about 120 local clones ([MORE-FROM-YOUR-REPOS.md](MORE-FROM-YOUR-REPOS.md)) found material the first audit did not use, from **AIDungeonMaster, the Kingkiller adventure, campaign-copilot, JoshRS, 3layers, Bramblewick, Aetheria and more of JoshMemory** (playtests, cast inventory, dialogue audit, SylviePhonetics). The headline additions:
+
+- **Prove fun in 30 minutes, then build the epic.** Five repos independently choose a small vertical slice with three fully modelled NPCs over a big cast.
+- **Engine owns truth, narrator owns prose** is a house rule you reinvented in at least five repos.
+- **The affordance gap:** your own 29 Oct playtest found a cashier who sold nothing and residents cooking in the wrong room; ~18 more buildings still have staff but nothing to do.
+- **One dialogue controller, one identity policy:** the town has three separate dialogue UIs, and NPC-to-NPC "yarns" are an unused **gossip pipeline** for player dialogue.
+- **Two independent conversation grammars** (Kingkiller's act/topic/tone/knowledge-limit; Lantern Road's 11 choice intents) point to the same safe design for LLM-driven NPCs: a closed set of moves the engine evaluates and the model only phrases.
+- **A child is a different audience:** short sessions with a closing ritual, a hint-model-retry feedback ladder, no red X, completion over variable-ratio rewards, co-play prompts inside the game.
+- **Honest status is a feature:** a generated quest matrix ("journal entries are not playable quests"), fact-provenance tags, "this is NOT a graphical playtest".
+- **Correction:** the town now has **99** simulated workers (not 38), i.e. **319** namespaced identity slots, not 258.
+
+---
+
 ## Practical checklist (condensed)
 
 **World**
@@ -257,7 +272,7 @@ WILDY is a small-scale case, not an open-world RPG, but the same rules apply:
 ## Method and limits
 
 - **External review:** targeted desk research across game-design talks/write-ups, dialogue-design essays, Wikipedia definitions, and psychology sources. It is **not** a systematic review or meta-analysis.
-- **Internal review:** GitHub code search across the account, a check of a private research catalogue, and a close read of 15+ public design/engineering documents in `JoshMemory`, `Whispering-Wilds` and WILDY.
+- **Internal review:** GitHub code search across the account, a check of a private research catalogue, and a close read of 15+ public design/engineering documents in `JoshMemory`, `Whispering-Wilds` and WILDY. A **second pass (2026-11-12)** searched about 120 local clones and read a further 30+ documents; see [MORE-FROM-YOUR-REPOS.md](MORE-FROM-YOUR-REPOS.md).
 - **Excluded:** private correspondence, credentials, private Google Drive contents and any unpublished personal material. A private catalogue was checked for duplicate research; no private text is reproduced.
 - **Limits:** no player study, no access to full sales/telemetry, and several sources are practitioner write-ups rather than controlled experiments. Counts from Repository Town are snapshots and describe role systems, not verified independent people.
 - **Evidence grades:** A = primary talk/design document; B = practitioner write-up or reference definition; C = this synthesis/inference. See [SOURCES.md](SOURCES.md).
@@ -270,6 +285,7 @@ WILDY is a small-scale case, not an open-world RPG, but the same rules apply:
 | --- | --- |
 | [REPORT.md](REPORT.md) | The long-form argument, evidence and design detail |
 | [YOUR-REPOS.md](YOUR-REPOS.md) | Audit of existing research across your repositories |
+| [MORE-FROM-YOUR-REPOS.md](MORE-FROM-YOUR-REPOS.md) | Second-pass addendum: 13 further findings, a correction, a convergence map and next actions |
 | [CHECKLIST.md](CHECKLIST.md) | Practical design and playtest checklist |
 | [SOURCES.md](SOURCES.md) | Annotated bibliography and evidence quality |
 
