@@ -1,7 +1,7 @@
 # Creative Voice, Original Play and NPC Distinctiveness — Portfolio Research Addendum
 
 **Research date:** 12 November 2026 · **Status:** source-grounded design research + repository desk audit; **not** a claim of implementation or completed player testing.  
-**Purpose:** extend, not repeat, the existing [REPORT](REPORT.md), [GAME-REPOS-AUDIT](GAME-REPOS-AUDIT.md), [AI-NAMING-AND-ORIGINALITY](AI-NAMING-AND-ORIGINALITY.md) and [NAMING-PLAYBOOK](NAMING-PLAYBOOK.md).
+**Purpose:** extend, not repeat, the existing [REPORT](REPORT.md), [GAME-REPOS-AUDIT](GAME-REPOS-AUDIT.md), [AI-NAMING-AND-ORIGINALITY](AI-NAMING-AND-ORIGINALITY.md), [NAMING-PLAYBOOK](NAMING-PLAYBOOK.md) and [WRITERS-ROOM](WRITERS-ROOM.md). The latter remains the **single authoritative showrunner/seeded-table/registry/production-rollout plan**; this file adds *player-facing fun, NPC behaviour, empirical speech-style evidence and tests* only.
 
 ## Executive finding
 
@@ -16,7 +16,7 @@ The portfolio already understands actor IDs, memory, authored dialogue, systemic
 5. **Distinctive failure and recovery:** identify what failure feels like in each world and why a player wants to retry, negotiate or return.
 6. **Blind attribution and observable playtesting:** test whether people can recognise a game/character without its name and whether interactions are enjoyable in practice.
 
-This is an **authoring and evaluation layer**, not a second Actor & Dialogue Core or a replacement for the existing NPC naming registry.
+This is an **authoring and evaluation layer**, not a second Actor & Dialogue Core, writers' room, voice bible, seeded generator, rollout plan, or NPC naming registry. **Follow [WRITERS-ROOM.md](WRITERS-ROOM.md) for the creative governance, project voice bible templates and current phased implementation roadmap.** Use this addendum to ask whether their outputs are *playably fun, socially distinctive and recognisable by strangers*.
 
 ## 1. Deduplication map: reuse these; do not rewrite them
 
@@ -26,7 +26,7 @@ This is an **authoring and evaluation layer**, not a second Actor & Dialogue Cor
 | Typed dialogue effects and conditions; authority boundaries | [RTD-009](https://github.com/joshualparris/JoshMemory/blob/main/repository-town/docs/RTD_009_DIALOGUE_SCHEMA_V1.md) | The author-facing **voice fingerprint** that sits above the validated dialogue contract |
 | 93-step dialogue implementation roadmap | [Skyrim NPC plan](https://github.com/joshualparris/JoshMemory/blob/main/repository-town/docs/SKYRIM_NPC_DIALOGUE_IMPLEMENTATION_TODO.md) | No new infrastructure roadmap; add a separate creative acceptance gate |
 | NPC callbacks, quest consequences and scene packs | [Lantern Road authored material](https://github.com/joshualparris/JoshMemory/tree/main/repository-town/games/lantern-road/story) | Voice diversity, story situations in conflict, and actual playtest discrimination |
-| Names, phonology, originality audit, collision registry | [AI-NAMING-AND-ORIGINALITY](AI-NAMING-AND-ORIGINALITY.md), [data/name-commons.json](data/name-commons.json) | Diversity of **actions, moral dilemmas, speech acts and player activities**, *not* more name lists |
+| Names, phonology, originality audit, collision registry and showrunner-led seeded tables | [AI-NAMING-AND-ORIGINALITY](AI-NAMING-AND-ORIGINALITY.md), [WRITERS-ROOM](WRITERS-ROOM.md), [data/name-commons.json](data/name-commons.json) | Diversity of **actions, moral dilemmas, speech acts and player activities**, *not* more name lists or another writing pipeline |
 | World-shape, density, player autonomy, MDA and Flow | [REPORT](REPORT.md), [CHECKLIST](CHECKLIST.md) | A per-project **fun signature**, expectation calibration and distinctive failure modes |
 | Repo scorecards and shared technical core | [GAME-REPOS-AUDIT](GAME-REPOS-AUDIT.md) | New creative direction for projects not covered there, plus deliberately contrasting identities for closely related games |
 
@@ -107,7 +107,7 @@ Measure not just “time in game” but whether players correctly anticipated th
 
 ### F6. Planning and structured state beat unconstrained prose for coherence
 
-**Evidence:** *SWAG: Storytelling With Action Guidance* (EMNLP 2024) explores separating narrative generation from action-level steering; the 2025 *Personalized Quest and Dialogue Generation* and 2026 *Game Knowledge Management System* research highlight grounded quest/narrative evaluation, with the latter expressly warning that LLM-as-judge is not independent player evidence. Ubisoft's 2024 NEO NPC and 2025 Teammates prototypes similarly use writer-authored personalities and scenario constraints; they remain experimental evidence, not proof that freeform NPCs are production-ready. [R12–R15]
+**Evidence:** *SWAG: Storytelling With Action Guidance* (EMNLP 2024) explores separating narrative generation from action-level steering; the 2023 *Personalized Quest and Dialogue Generation* and 2026 *Game Knowledge Management System* research highlight grounded quest/narrative evaluation, with the latter expressly warning that LLM-as-judge is not independent player evidence. Ubisoft's 2024 NEO NPC and 2025 Teammates prototypes similarly use writer-authored personalities and scenario constraints; they remain experimental evidence, not proof that freeform NPCs are production-ready. [R12–R15]
 
 **Practical translation:** keep **three separate layers**:
 - **World designer**: assigns the immutable world rules and current authoritative state (already covered in RTD-009; reuse).
@@ -122,14 +122,14 @@ The editor is not permitted to invent a solved quest, an owned item or a witness
 
 | Project and grounded starting point | Unique fun promise (what you *do*) | Distinct voice and mood | Original pilot (not yet implemented) | What to avoid |
 | --- | --- | --- | --- | --- |
-| **[Repository Town](https://github.com/joshualparris/JoshMemory/tree/main/repository-town)** — Narromine-grounded 3D town, people and daily work | **Notice → help → observe the town change**. Familiar streets acquire meaning through small obligations and systems | Grounded Central West Australian everyday speech; warm and observant, occasionally dry, never a caricature | **The refrigeration morning:** a delivery is delayed by a failed cold room. A shop worker, driver and repairer disagree over whose next job matters. Player can carry a part, lend transport or negotiate another delivery window; the next morning is visibly different | Fantasy “chosen one” plots, invented real-person biographies, generic friendship bars, quest spam |
+| **[Repository Town](https://github.com/joshualparris/JoshMemory/tree/main/repository-town)** — Narromine-grounded 3D town, people and daily work | **Notice → help → observe the town change**. Familiar streets acquire meaning through small obligations and systems | Grounded Central West Australian everyday speech for the real Narromine layer; warm and observant, occasionally dry. Fictional Repository Town may carry the writers’ room's civic-magical-realism angle, but never pass fictional incidents or invented locals off as real | **The refrigeration morning:** a delivery is delayed by a failed cold room. A shop worker, driver and repairer disagree over whose next job matters. Player can carry a part, lend transport or negotiate another delivery window; the next morning is visibly different | Fantasy “chosen one” plots, invented real-person biographies, generic friendship bars, quest spam |
 | **[Lantern Road](https://github.com/Parris-Tech-Services/lantern-road)** — hex travel and four-person party | **Journey → promise → costly loyalty**. Companions read the same hardship differently | Spare frontier folktale, weather and material objects; warmth under uncertainty, never uniformly grim | **The ferryman's lamp:** an overdue crossing pits a sick traveller against a family who needs the last fuel; companions propose incompatible but reasonable solutions, and one remembers how you decided | A stat-only faction shift, anonymous quest givers, always choosing between obvious good and evil |
 | **[The Undercity](https://github.com/joshualparris/theUndercity)** — original memory-trading city and dense storylets | **Interpret → bargain → exploit a civic contradiction**. Bureaucracy becomes a social puzzle | Crowded, wickedly funny institutional Gothic; official certainty paired with everyday absurdity | **The person officially absent:** an applicant has been erased from an index but keeps receiving bills. A clerk, an ally and a creditor each need different evidence; records and reputations change | More interchangeable cryptic nouns, random supernatural twists without institutional causes |
 | **[Neathbound](https://github.com/joshualparris/JoshMemory/tree/main/repository-town/games/neathbound)** — compact route-based dark narrative | **Listen → infer → choose what to disclose**. Intimacy and absence create dread | Quiet, personal and restrained; the unsaid matters more than ornate descriptions | **Two punches in a one-way ticket:** three witnesses agree on the trip but disagree on who returned. The player chooses what truth to tell a family | Cloning Undercity's bureaucratic satire, multiplying storylets without returning people |
-| **[Astra / AI dungeon projects](https://github.com/parristechservices-prog/AIDungeonMaster)** — freeform AI GM ambition | **Propose → test the world → improvise within rules**. Player invention produces coherent responses | Agile table-GM clarity; vivid sensory hooks, quick causal adjudication, strong “yes, and/yes, but/no, because” | **The stranded rope bridge:** scout, negotiate for materials, or improvise a risky crossing; the same world model resolves all three, and NPCs remember the choice | AI manufacturing unearned inventory, new NPC identities each turn or fake omniscience |
-| **[Whirring Wilderness](https://github.com/Parris-Tech-Services/WhirringWilderness)** — text-first wildlands RPG | **Listen → track → decide whether to disturb**. Reading the environment is a skill | Naturalist, close-observed and quiet; concrete bird, soil, shadow and weather details rather than mystical adjectives | **The wrong birdsong:** a ranger and hermit interpret the silence differently; following signs reveals a mundane danger before a supernatural one is considered | Generic prophecy, “ancient” every second sentence, borrowing Lantern Road's frontier speech |
+| **[Astra / AI dungeon projects](https://github.com/parristechservices-prog/AIDungeonMaster)** — freeform AI GM ambition | **Propose → test the world → improvise within rules**. Player invention produces coherent responses | Mythic-frontier oracle with a ledger; agile table-GM clarity, sensory hooks, quick causal adjudication, strong “yes, and/yes, but/no, because” | **The stranded rope bridge:** scout, negotiate for materials, or improvise a risky crossing; the same world model resolves all three, and NPCs remember the choice | AI manufacturing unearned inventory, new NPC identities each turn or fake omniscience |
+| **[Whirring Wilderness](https://github.com/Parris-Tech-Services/WhirringWilderness)** — text-first wildlands RPG | **Listen → track → decide whether to disturb**. Reading the environment is a skill | Oral wilderness tall tale, anchored by real naturalist observations of bird, soil and weather; storytelling without indiscriminate mystical adjectives | **The wrong birdsong:** a ranger and hermit interpret the silence differently; following signs reveals a mundane danger before a supernatural one is considered | Generic prophecy, “ancient” every second sentence, borrowing Lantern Road's frontier speech |
 | **[Grey March / Marsh](https://github.com/Parris-Tech-Services/Marsh)** — hex map → ASCII town → tactical battle | **Change scale → solve the same human problem three ways** | Clear, tactile, legible; visual/musical motifs bridge each zoom level | **The blocked causeway:** see flood on the map, trace its impact on residents in town, and solve a timed defence/repair scene tactically; same promise survives all three scales | Three unrelated minigames glued together; copied Lantern Road questlines |
-| **[WILDY](https://github.com/joshualparris/RunescapeFedoraCrashDoctor)** — exploration and three-minute Rift | **Discover → prepare → survive**. Every exploration choice has a readable combat pay-off | Bright, concise, playful field-journal language, energetic combat barks | **A temporary blessing with a price:** one camp NPC offers speed at the cost of a defensive rune; test whether players understand and choose the trade-off | Long character monologues during short sessions, scope growth into a second MMO |
+| **[WILDY](https://github.com/joshualparris/RunescapeFedoraCrashDoctor)** — exploration and three-minute Rift | **Discover → prepare → survive**. Every exploration choice has a readable combat pay-off | Campfire folk horror with brief warmth and wit, a practical field journal and crisp three-minute combat barks | **A temporary blessing with a price:** one camp NPC offers speed at the cost of a defensive rune; test whether players understand and choose the trade-off | Long character monologues during short sessions, scope growth into a second MMO |
 | **[Buckland Blocks](https://github.com/Parris-Tech-Services/BucklandBlocks)** — procedural voxel terrain/building | **Tinker → build → see emergent consequences**. Structures and neighbours make experimentation funny | Practical workshop banter and material specificity; curious, not grandiose | **The wall that sends water next door:** a clever build solves one problem and creates another; both neighbours act on real flood/pathfinding state | Copy-pasted Minecraft NPC chores, scripted “simulation” that ignores built geometry |
 | **[Energy Quest](https://github.com/Parris-Tech-Services/energyquest)** — early Unity energy-collection prototype | **Collect → convert → sacrifice an opportunity → improve the world** | Hopeful field-science notebook: measurements, experiments and ethical disagreements, not space-opera jargon | **The final charge:** power either a greenhouse, a lift or a mining drill; observe resulting changes before adding biomes | Claiming nonexistent gameplay is already implemented; endless pickups without a trade-off |
 | **[JoshRS](https://github.com/Parris-Tech-Services/JoshRS)** — real private 377 world plus separate original Woodlands demo | **Learn a local problem → cooperate → complete a short quest**. Family-scale discovery, dependable state and genuine NPC presence | Light, mischievous, workaday humour in *original expansions*; preserve existing historical game content faithfully without blending eras | **A bridge with an unreliable bell:** two family players coordinate on opposite banks using a repairer, ferryman and timed mechanism; one complete short original quest, verified in the actual 377 engine separately from Woodlands | Misrepresenting an HTML demo as the live 377 world; duplicating licensed quests/assets; auto-importing other revisions without parity tests |
@@ -148,22 +148,11 @@ The editor is not permitted to invent a solved quest, an owned item or a witness
 - **Whirring vs Energy Quest:** ecological observation and restraint **versus** experiments and explicit resource trade-offs.
 - **Sigil Delve vs Astra:** authored tactical constraints **versus** freeform proposals bound by the same rules.
 
-## 4. The voice fingerprint worksheet (one per game, then one per core NPC)
+## 4. NPC-specific behavioural fingerprint (supplement to the existing voice bible)
 
-Write this **before** asking any AI for quests or dialogue. Keep it in the relevant game's own design docs, not as duplicated runtime state.
+**Do not create another project-level voice template.** The canonical showrunner's project tone, fixed facts, naming tables, seed, continuity registry and sign-off are already in [WRITERS-ROOM.md](WRITERS-ROOM.md) and [templates/writers-room/](templates/writers-room/). This is a *small NPC-level extension* to that approved bible: what the person notices, wants, conceals and actually does under pressure. Keep the filled card in the game's existing character authoring system, not as a divergent game-state source.
 
 ~~~text
-PROJECT:                 | CANONICAL REPO:
-PROMISE (player verb):   | WHAT IS FUN IN 10 MINUTES:
-EMOTIONAL CURVE:         | PLAYER ROLE:
-TONE:                    | TWO CONTRASTING REFERENCE FEELINGS:
-WORLD MATERIALS:         | SOCIETY'S RULES / INSTITUTIONS:
-DIALOGUE CADENCE:        | FAVOURED IMAGE FIELDS:
-HUMOUR SOURCE:           | HOW PEOPLE REFUSE:
-HOW FAILURE FEELS:       | WHAT SUCCESS COSTS:
-REPEAT-SAFE INTERACTION: | AUTHENTICITY / RIGHTS BOUNDARY:
-NEVER SOUND LIKE:        | THREE SIGNATURE ACTIONS:
-
 NPC ID:                  | JOB / RELATIONSHIP TO COMMUNITY:
 THE FIRST THING NOTICED: | THREE FAVOURED WORDS (NOT CATCHPHRASES):
 SENTENCE RHYTHM:         | DOESN'T WANT TO TALK ABOUT:
@@ -213,15 +202,15 @@ Every game can share the engine state **scarce resource; two claimants; delayed 
 
 **Do not paste a single scenario across games with nouns changed.** The player's *verbs*, the social meaning of the choice, the sensory texture and the way failure lands must also differ.
 
-## 6. Practical creative planning process for humans and agents
+## 6. Gameplay experiment checks for the established writers' room
 
-This process is deliberately *above* the technical task plans in the existing repo.
+**Not a second writing room or implementation roadmap.** Keep the curated table draw, project voice decision and provenance in [WRITERS-ROOM.md](WRITERS-ROOM.md). Apply the following *playability and distinction checks* to its approved candidate situations, above the technical tasks in the existing repo.
 
 **Pass 0 — Search first.** Read the project's actual README, vision, mechanics, NPC/quest lists, present backlog and source-of-truth documents. Identify the exact feature already implemented. Record whether the evidence is source, CI, browser, or live gameplay. Never invent a missing project feature.
 
-**Pass 1 — Lock the identity.** One fun verb, one emotional curve, one social rule, one failure grammar, one forbidden generic pattern. This is the project's creative contract.
+**Pass 1 — Apply the existing identity.** Read the project's approved writers' room voice bible and inherited shared canon; add one fun verb, one social rule and one failure grammar *only as diagnostic annotations*, not competing tone canon.
 
-**Pass 2 — Diverge outside the first answer.** Produce 12 one-paragraph situation proposals across ≥4 player verbs and ≥3 emotions. Independently vary constraint and social form. Avoid reusing prior portfolio names and themes. Store a short **rejection reason** for near-duplicates.
+**Pass 2 — Test idea-space coverage.** Take 12 *already drawn or approved* situation candidates from the established seeded-tables/room process and check coverage across ≥4 player verbs and ≥3 emotions. Have the room generate additional candidates in missing bins if needed. Keep the existing registry authoritative and store a **rejection reason** for near-duplicates.
 
 **Pass 3 — Causal test.** For three finalists write: initial facts, two competing goals, affordances, preconditions, 3 actions, likely direct effects, second-order social effects, a failed attempt and first-return callback. Reject any scene that demands imaginary inventory, inaccessible locations or inconsistent time.
 
@@ -236,12 +225,14 @@ This process is deliberately *above* the technical task plans in the existing re
 **Prompt for a creative planning agent (copyable):**
 
 ~~~text
-Read this project's actual source-of-truth README, narrative files and current backlog.
-First report EXISTING features and evidence grade. Do not duplicate previous quests,
+Read this project's source-of-truth README, narrative files, backlog and
+WRITERS-ROOM.md creative governance/seeded-table rules. First report EXISTING
+features, locked names/premise facts and evidence grade. Do not duplicate previous quests,
 characters, names, systems, research or plans. Do not alter the engine or import other
 game IP. Define a distinct project voice using: player verb, emotional curve,
 material world, social rules, linguistic cadence, humour, refusal style and failure.
-Generate 12 situation premises covering at least four kinds of play; reject close
+Review 12 approved or seeded situation candidates covering at least four
+kinds of play; reject close
 matches to this repo and other games in the portfolio. For the three strongest,
 show two conflicting legitimate wants, three CAUSALLY different player actions,
 a non-ideal outcome, immediate physical/social change, a return callback and
@@ -282,9 +273,11 @@ The following are **proposed pilot thresholds, not research-proven universal tar
 - An AI suggests an unregistered new item, name or quest; the engine rejects it safely.
 - On the first minute of play, the player knows what can be attempted *without* a tutorial lecture.
 
-## 8. Work orders: do the smallest distinct experiment first
+## 8. Candidate playability experiments (not another project rollout)
 
-| Priority | Project | Proposed deliverable, deliberately scoped | Verification |
+**Do not reorder or duplicate the existing [WRITERS-ROOM.md](WRITERS-ROOM.md) phased rollout.** These are experiments to attach to each project *when that project's phase/agent is ready*. P0/P1/P2 indicate the *research value of the experiment*, not permission to open competing tasks or skip an approved phase. The writers' room remains the governing implementation sequence.
+
+| Research value | Project | Proposed deliverable, deliberately scoped | Verification |
 | --- | --- | --- | --- |
 | P0 | **Repository Town** | One three-person, one-morning repair/delivery dispute backed by *existing* actor/job/shop/world state; 3 solutions, at least one witnessed consequence | Real in-browser movement, social reactions and save/reload; no invented town facts |
 | P0 | **Lantern Road** | One companion disagreement in a travel/ferry scene with two valid outcomes and separate companion follow-up lines | Existing quest/content validator + actual browser play of both branches |
@@ -296,7 +289,7 @@ The following are **proposed pilot thresholds, not research-proven universal tar
 | P1 | **Whirring Wilderness** | One clue read two ways; one quiet NPC conversation with a clear alternate path | Quest progress, restore and mobile controls verified |
 | P2 | **Neathbound, WILDY, Marsh, Astra, ASHFALLER, Forbidden Quests** | One tailored pilot each, using the identity cards above, *after* current owners' pending work is inspected | Source-specific contract + two alternative paths + observable consequence |
 
-**Do not open sixteen duplicate roadmaps across game repos.** Maintain this cross-project research here; project-specific implementation tasks belong in their existing issue/queue systems. This addendum **does not claim those work orders have begun**.
+**Do not open sixteen duplicate roadmaps across game repos.** Maintain this cross-project experimental research here and obey the existing writers' room sequence; project-specific implementation tasks belong in their existing issue/queue systems. This addendum **does not claim those work orders have begun**.
 
 ## 9. Source and evidence ledger — new material only
 
