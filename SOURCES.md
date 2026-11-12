@@ -121,7 +121,7 @@ These are public repos unless noted. They are evidence of **design intent and en
 
 ### Private catalogue
 
-`ResearchLibrary` (private) was checked for related work. It is a **catalogue**, not a source repository. A title-level pointer to a narrative-RPG design document exists, but the underlying document was not accessible without authentication, and no private content is reproduced or linked here. `ResearchAtlas` is a catalogue frontend, not an additional evidence source.
+A private Dewey-style research catalogue was checked for related work. It is a **catalogue**, not a source repository. A title-level pointer to a narrative-RPG design document exists, but the underlying document was not accessible without authentication, and no private content is reproduced or linked here. A related private catalogue frontend was not an additional evidence source.
 
 ---
 
