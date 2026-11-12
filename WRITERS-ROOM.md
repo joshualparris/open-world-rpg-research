@@ -95,13 +95,13 @@ The **showrunner is you**. Each writer is a *role with house rules*, not a prete
 | Story premise and constraint | **Code** (tables) |
 | Beats and scenes | LLM, one writer at a time, with the bible prefix |
 | Dialogue | LLM *Voice writer*, with the 2 sample lines per tier |
-| Cliché and banlist pass | LLM *Contrarian* plus `name_audit.py` |
+| Cliché and slop pass | **Code finds it** (`slop_lint.py`, `name_audit.py`); an LLM *Editor* rewrites **only the listed spots** (external feedback, max 2 rounds) |
 | Canon and registry check | **Code** plus an LLM check |
 | Approval and canon changes | **Human** |
 
 ### 4.4 Day-to-day pipeline (Dramatron-style)
 
-1. Showrunner picks a brief. 2. Code draws names, places and a premise (the **seed is logged**). 3. *Plot writer* drafts the beats. 4. *Voice writer* drafts scenes with the bible prefix and samples. 5. *Contrarian* removes stock beats and banned phrases. 6. *Continuity* checks the registry and canon. 7. **Human approves.** 8. Registry updated.
+1. Showrunner picks a brief. 2. Code draws names, places and a premise (the **seed is logged**). 3. *Plot writer* drafts the beats. 4. *Voice writer* drafts scenes with the bible prefix and samples. 5. **Slop check:** `slop_lint.py` scores the draft; if it is above "ok", the *Editor* rewrites only the flagged spots (max 2 rounds), then re-lint. 6. *Continuity* checks the registry and canon. 7. **Human approves.** 8. Registry updated.
 
 ### 4.5 Naming grammar, the Tolkien-lite way
 
@@ -131,6 +131,7 @@ Name your inspirations as **mechanics** ("history as flavour", "fairy-tale regis
 | [`tools/originality/namegen.py`](tools/originality/namegen.py) | Now takes **`--voice voice.json`**: per-repo phonology for given names, surname words or compounds, place compounds and kinds, trades, quirks, wants, an **`avoid` list**, a **surname-repeat limit** (one family = one surname), and **reserved existing canon** (people and places) so new names never collide with it. Exits with a clear message when a pool is exhausted. |
 | [`templates/voice.example.json`](templates/voice.example.json) | A **draft** voice for Lantern Road, inferred only from its public canon. In a test, 150 requested names gave 31 distinct given names and 31 distinct surnames (then stopped because the surname list ran out, as designed), **0 collisions with the 19 reserved canon names, and no "Reed"**. |
 | [`tools/originality/name_audit.py`](tools/originality/name_audit.py) | Finds overused defaults; usable as a CI gate. |
+| [`tools/originality/slop_lint.py`](tools/originality/slop_lint.py) | Scores prose for stock words, phrases, structures and repetition; per-file findings with line numbers; `--max-score` for CI. See [ANTISLOP.md](ANTISLOP.md). |
 | [`templates/VOICE-BIBLE.md`](templates/VOICE-BIBLE.md) | The 13-section template. |
 
 The example is a **proposal for you to approve or change**, not canon. Its generated names are plausible, not perfect (one run produced a modern "Kevin", which is why the `avoid` list now applies to given names too); tune the phonology per repo.
@@ -161,7 +162,7 @@ Measure: **distinct-name ratio**, **banlist hit rate**, **surname repeats**, **a
 | ---: | --- | --- | --- |
 | 1 | Adopt the **Voice Bible template** and the "original writers, no imitation" rule | **Done** (this PR) | S |
 | 2 | **Voice-aware generator** (`--voice`, reserved canon, surname rules, avoid list) | **Done** | S |
-| 3 | **Voice lint**: banned lexicon per bible, plus a detector for proper nouns not in the registry | To build | S |
+| 3 | **Voice and slop lint**: banned lexicon per bible, stock words/phrases/structures, repetition (`slop_lint.py`, **done**; see [ANTISLOP.md](ANTISLOP.md)). Still to build: a detector for proper nouns not in the registry | **Partly done** | S |
 | 4 | **Measurement kit**: generate N NPCs per arm, compute the metrics in section 7, output a blind speaker-ID sheet | To build | M |
 | 5 | **Shared prompt skeleton**: static prefix (bible, at most ~2,500 tokens) + writer persona + supplied facts + 2-3 samples; never rebuilt per turn | To write | S |
 | 6 | **Ground rules**: showrunner approval, "the registry is law", rename-migration rule (display names only; stable actor keys never change), IP rule | To write | S |

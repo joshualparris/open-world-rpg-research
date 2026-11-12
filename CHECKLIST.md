@@ -364,4 +364,18 @@ See [WRITERS-ROOM.md](WRITERS-ROOM.md) and [`templates/VOICE-BIBLE.md`](template
 
 ---
 
+## 16. Anti-slop (prose quality)
+
+See [ANTISLOP.md](ANTISLOP.md).
+
+- [ ] The generation prompt says what to do (positive style rules); long banlists live in validators, not in the prompt.
+- [ ] `slop_lint.py` runs on every batch; the median score is within budget and no file is above the revise threshold.
+- [ ] Anything above "ok" goes through an editor pass **fed the linter's findings** (max 2 rounds), then is re-linted.
+- [ ] The score is used as a quality check on our own output, never to judge or accuse a person.
+- [ ] Thresholds and word lists are tuned on text we consider good, and refreshed monthly from approved vs rejected text.
+- [ ] Structural tells (negative parallelism, triplets, tidy endings) and repetition are checked, not only vocabulary.
+- [ ] A human reads every batch before it is canon.
+
+---
+
 *If most answers are “yes,” the world and cast are probably doing the hard work. If not, start with presence and density before adding more map or more NPCs.*

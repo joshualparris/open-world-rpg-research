@@ -42,9 +42,11 @@ Add or remove rows to fit the room size. Each writer is **original and fictional
 - **Name taboos:** names never used; defaults that are banned (see `tools/originality/banlist.txt`).
 - **Registry:** every name lives in `registry.json`; the model is never asked to choose a name.
 
-## 5. Lexicon
+## 5. Lexicon and slop
 - **Preferred words and images (10-20):**
-- **Banned words and phrases:** stock fantasy/sci-fi words and "slop" you do not want (for example *whisper(s), echo(es), tapestry, ozone, ledger, locket*, unless chosen).
+- **Positive style rules (what writers DO):** 4-6 short rules, each saying what to write ("name the exact object", "end on an action"). Put these in the prompt.
+- **Banned words and phrases:** stock fantasy/sci-fi words and "slop" you do not want. **Keep this list in `voice.json` (`banned_words`, `banned_phrases`) and enforce it with `slop_lint.py`; do not recite it to the model.**
+- **Slop budget:** median `slop_lint` score at most 5, no file above 15 (tune on text you like); stock-word hits only when intentional.
 - **Idioms this world uses (and invents):**
 
 ## 6. How the cast speaks  *(voice lives in examples)*
@@ -72,7 +74,7 @@ Who may add a name, place or rule; how it enters `registry.json`; how a rename i
 ## 11. QA gates (every batch)
 - [ ] `name_audit.py` has zero hits from the banlist unless chosen on purpose.
 - [ ] No name outside `registry.json`; no repeated surnames outside families.
-- [ ] `voice_lint` (banned lexicon) passes.
+- [ ] `slop_lint.py` is within the slop budget (editor pass fed by its findings, max 2 rounds).
 - [ ] Blind test: three speakers are told apart without names.
 - [ ] Showrunner approves each batch.
 

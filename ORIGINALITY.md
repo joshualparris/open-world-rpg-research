@@ -131,10 +131,12 @@ Over N generations, track: **distinct first names / N**, banlist hit rate, repea
 ```text
 Names are facts supplied by the game, never your choice.
 - Use only names from the NAMES list in the context. If you need a new one, ask for it; do not invent one.
-- Never use these overused defaults unless they appear in the NAMES list: Elara, Elias, Mara, Mira, Lyra, Kael, Thorne, Voss, Seraphina, Aria, Eldoria.
-- Places, trades, objects and quirks also come from the context. Do not default to lighthouses, clockmakers, librarians, ledgers, lockets or whispering/misty/hollow place names.
+- Places, trades, objects and quirks also come from the context; use them as given.
+- When something is missing from the context, ask for it instead of inventing it.
 - If a scene needs something that is not in the context, make it specific and a little odd (a concrete job, an unglamorous want), not mythic.
 ```
+
+> **Correction (see [ANTISLOP.md](ANTISLOP.md)):** an earlier version of this prompt listed the overused names ("never use Elara, Mira ..."). Naming a banned item can prime it (the "pink elephant" effect; evidence for text models is anecdotal). So the prompt now **says what to do**, and the banlist is enforced by `name_audit.py` and the registry check, not recited to the model.
 
 **Per-NPC seed (filled in by code, then handed to the model):**
 

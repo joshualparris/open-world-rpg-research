@@ -2,7 +2,7 @@
 
 **A source-grounded synthesis for large worlds, dense casts and conversations that matter.**
 
-Prepared 2026-11-12 · Desk research, not a playtest report. · Companion files: [REPORT.md](REPORT.md) · [YOUR-REPOS.md](YOUR-REPOS.md) · [MORE-FROM-YOUR-REPOS.md](MORE-FROM-YOUR-REPOS.md) · [ORIGINALITY.md](ORIGINALITY.md) · [WRITERS-ROOM.md](WRITERS-ROOM.md) · [CHECKLIST.md](CHECKLIST.md) · [SOURCES.md](SOURCES.md)
+Prepared 2026-11-12 · Desk research, not a playtest report. · Companion files: [REPORT.md](REPORT.md) · [YOUR-REPOS.md](YOUR-REPOS.md) · [MORE-FROM-YOUR-REPOS.md](MORE-FROM-YOUR-REPOS.md) · [ORIGINALITY.md](ORIGINALITY.md) · [WRITERS-ROOM.md](WRITERS-ROOM.md) · [ANTISLOP.md](ANTISLOP.md) · [CHECKLIST.md](CHECKLIST.md) · [SOURCES.md](SOURCES.md)
 
 ---
 
@@ -288,6 +288,7 @@ WILDY is a small-scale case, not an open-world RPG, but the same rules apply:
 | [MORE-FROM-YOUR-REPOS.md](MORE-FROM-YOUR-REPOS.md) | Second-pass addendum: 13 further findings, a correction, a convergence map and next actions |
 | [ORIGINALITY.md](ORIGINALITY.md) | Why LLMs reuse names like Mira, what research says, and how to get more original names, places and stories; tools in `tools/originality/` |
 | [WRITERS-ROOM.md](WRITERS-ROOM.md) | Per-repo Voice Bibles, original "house writers", naming grammars, and a numbered one-repo-at-a-time roadmap; templates in `templates/` |
+| [ANTISLOP.md](ANTISLOP.md) | What people do against "AI slop", what not to do, our tool-fed edit loop, a measured Lantern Road baseline, and `slop_lint.py` |
 | [CHECKLIST.md](CHECKLIST.md) | Practical design and playtest checklist |
 | [SOURCES.md](SOURCES.md) | Annotated bibliography and evidence quality |
 
