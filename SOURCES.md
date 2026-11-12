@@ -192,6 +192,14 @@ A private Dewey-style research catalogue was checked for related work. It is a *
 9. **Roush, A. & Mahajani, P. (2026). *Anti-slopping: An innovation for rectifying LLM writing clichés.*** Thoughtworks. [link](https://research.thoughtworks.com/library/anti-slopping-an-innovation-for-rectifying-llm-writing-cliches)  
    Used for: anti-slop sampler, 69–96% throughput cost at 1k–8k patterns, logit access required. **Grade B** (practitioner/research lab).
 
+## Further original-play and NPC-voice research (non-duplicative)
+
+The separate [CREATIVE-VOICE-AND-PLAY-RESEARCH.md](CREATIVE-VOICE-AND-PLAY-RESEARCH.md#9-source-and-evidence-ledger--new-material-only) includes its own **R1–R15 source ledger** on character-specific linguistic style (PERSONAGE/SASS), social simulation (Comme il Faut/Prom Week), quality-diversity, calibrated fun, conversation pragmatics, writer-authored constrained AI NPCs and human evaluation. It also adds game-specific pilot experiments and blind voice-attribution tests.
+
+**No bibliography entries are copied here.** The canonical writers’ room theory, voice bible, seeded facts and production roadmap remain in [WRITERS-ROOM.md](WRITERS-ROOM.md).
+
+---
+
 ## Claim-to-source map
 
 | Claim | Sources |
