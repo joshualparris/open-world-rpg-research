@@ -14,13 +14,13 @@ The first audit ([YOUR-REPOS.md](YOUR-REPOS.md)) read about six repositories clo
 
 - All repos in your session that were cloned locally (about 120, counting a few duplicates), by ripgrep over `*.md`, `*.txt`, `*.mdx` and the extracted text of three `.docx` planning files, using: `NPC`, `non-player`, `dialogue tree`, `player agency`, `game feel`, `flow state`, `game design`, `immersion`, `fun`, plus a filename sweep (`research`, `design`, `playtest`, `quest`, `lore`, `audit`, `roadmap`, `principle`).
 - Skipped on purpose: `node_modules`, build output, bundled `public/games/**`, changelogs, and generated "BEAUTIFUL_CODE_STANDARD_AUDIT" boilerplate.
-- **Hit counts by repo** (files matching the keyword sweep): repository-town-playtest 684 (a snapshot of ~60 games), joshrs 170, joshmemory 142, kkc-adventure 107, repository-town 58, lantern-road 46, AIDungeonMaster 28, campaign-copilot 18, Parris-Life-Dashboard 15, JoshHub-Local 14, WhirringWilderness 10, CanonRPG 10, and a long tail of 1-8.
+- **Hit counts for the public repos that mattered** (files matching the keyword sweep): repository-town-playtest 684 (a snapshot of ~60 games), joshrs 170, joshmemory 142, kkc-adventure 107, repository-town 58, lantern-road 46, AIDungeonMaster 28, campaign-copilot 18, WhirringWilderness 10, CanonRPG 10, and a long tail of 1-8 across other repos.
 
 ### 0.2 What this pass could not see
 
 - **PDFs and Drive documents.** `3layers` and `kkc-adventure` hold PDFs (character sheets, handovers, planning PDFs) that were not text-extracted. The `.docx` planning files *were* read.
 - **Private or inaccessible repos.** Only repos attached to the session were searched.
-- **The source of the child-learning research.** `SylvieElias_AppDesign_Research.txt` is referenced in two repos but the file itself is not in any of them; only excerpts and a roadmap built from it are. Treat those excerpts as secondary.
+- **The source of the child-learning research.** The child-app design research note is referenced in two repos but the file itself is not in any of them; only excerpts and a roadmap built from it are. Treat those excerpts as secondary.
 - **Players.** No document anywhere contains observed-player data on a *dense-NPC open world*. The closest are the Repository Town playtests, which are automated plus developer-driven, and the child-app QA notes. See §4.
 
 ### 0.3 Evidence grades used here
@@ -220,7 +220,7 @@ You wrote two conversation models without referencing each other:
 
 #### N11. A child is a different audience: the fun rules change
 
-`SylviePhonetics` and `Sleepy` hold the most concrete "what makes this fun and safe for a small player" guidance in your repos ([QA-Recommendations](https://github.com/joshualparris/joshmemory/blob/main/repository-town/games/sylvie-phonetics/QA-Recommendations.md), [ResearchImplementationRoadmap](https://github.com/joshualparris/joshmemory/blob/main/repository-town/games/sylvie-phonetics/docs/ResearchImplementationRoadmap.md), [Sleepy QA](https://github.com/joshualparris/joshmemory/blob/main/repository-town/games/sleepy/QA-Recommendations.md)). They are built from a research note for a 4-year-old and a QA audit. The transferable rules:
+`SylviePhonetics` and `Sleepy` hold the most concrete "what makes this fun and safe for a small player" guidance in your repos ([QA-Recommendations](https://github.com/joshualparris/joshmemory/blob/main/repository-town/games/sylvie-phonetics/QA-Recommendations.md), [ResearchImplementationRoadmap](https://github.com/joshualparris/joshmemory/blob/main/repository-town/games/sylvie-phonetics/docs/ResearchImplementationRoadmap.md), [Sleepy QA](https://github.com/joshualparris/joshmemory/blob/main/repository-town/games/sleepy/QA-Recommendations.md)). They are built from a research note for a preschool-age child and a QA audit. The transferable rules:
 
 | Rule | Source wording / detail |
 | --- | --- |
@@ -229,13 +229,13 @@ You wrote two conversation models without referencing each other:
 | **Informational praise; no variable-ratio rewards** | "Avoid variable-ratio reward schedules, choose narrative completion over points, and never shame mistakes." |
 | **Audio-first, then symbols** | Sound before letters; sequence matters; one learning stage per mini-game. |
 | **Anchor on the child's own name** | Used as a warm start, not a repeated quiz. |
-| **Co-play is built into the game** | A caregiver prompt on every screen ("Say the sound first, then let Sylvie copy"); movement/breathing breaks every 5-7 minutes; "Find one thing in the room that starts with your favorite sound." |
+| **Co-play is built into the game** | A caregiver prompt on every screen ("Say the sound first, then let [the child] copy"); movement/breathing breaks every 5-7 minutes; "Find one thing in the room that starts with your favorite sound." |
 | **Sleep-safe design** (Sleepy) | Lights-out mode that fades to audio; no autoplay or external video; a parent gate; a timer and a prompt to go and read a real book. |
-| **Private family play** (JoshRS) | "No internet, no accounts on external services, no strangers, no public chat" for the family LAN world ([PLAY_WITH_SYLVIE](https://github.com/Parris-Tech-Services/joshrs/blob/main/docs/PLAY_WITH_SYLVIE.md)). |
+| **Private family play** (JoshRS) | "No internet, no accounts on external services, no strangers, no public chat" for the family LAN world ([family LAN guide](https://github.com/Parris-Tech-Services/joshrs/blob/main/docs/PLAY_WITH_SYLVIE.md)). |
 
 **Why it matters for an open-world RPG:** if family co-play is a real audience, then **session shape** (where does a session end?), **failure tone** (what does the world say when you miss?) and **reward type** (completion vs a slot-machine drip) matter more than system depth. They also line up with the main report's finding that failure should be authored content.
 
-**Caveats:** the underlying research file is not in any repo, so treat these as *your* working rules, not cited science; the roadmap itself says app practice must "support, not replace" therapist or educator guidance. Don't generalise age-4 limits to adults; generalise the *principles* (closing ritual, informative feedback, no manipulative reward loops).
+**Caveats:** the underlying research file is not in any repo, so treat these as *your* working rules, not cited science; the roadmap itself says app practice must "support, not replace" therapist or educator guidance. Don't generalise preschool-age limits to adults; generalise the *principles* (closing ritual, informative feedback, no manipulative reward loops).
 
 **Grade:** B- (QA audit plus a roadmap, secondary source). **Design test:** does a session end, on purpose, in a way you would be comfortable with a four-year-old (or a tired adult) seeing?
 
@@ -262,7 +262,7 @@ AIDungeonMaster's gaps list adds the **missing-DM problems** an app must replace
 
 #### N13a. Competence loops that forgive error, with social progression
 
-The Repository Town [Occupations doc](https://github.com/joshualparis/joshmemory/blob/main/repository-town/docs/OCCUPATIONS_PLAYTEST.md) describes jobs built from **physical stations and real items** (mop with a warning sign; weigh 2000 game grams; proof for 40 town minutes; take real queued villagers' tickets). Design choices worth keeping:
+The Repository Town [Occupations doc](https://github.com/joshualparris/joshmemory/blob/main/repository-town/docs/OCCUPATIONS_PLAYTEST.md) describes jobs built from **physical stations and real items** (mop with a warning sign; weigh 2000 game grams; proof for 40 town minutes; take real queued villagers' tickets). Design choices worth keeping:
 
 - "**Incorrect choices invite rework without deductions from earned wages.**" A full shift earns its agreed wage even if some duties need rework.
 - Progression is **recognition**: three supervised shifts earn a town certificate and a 10% higher offer; six earn experienced-worker status and 25%; certificates unlock fixed-scope contracts with employer **escrow**.
@@ -280,7 +280,7 @@ A second pass should surface contradictions, not hide them.
 
 | Topic | Document A | Document B | How to resolve |
 | --- | --- | --- | --- |
-| **How many NPCs?** | A pasted Neverwinter wishlist asks for "50+ unique NPCs ... romance options ... 30+ side quests" ([JoshHub-Local Game-Fixer](https://github.com/Parris-Tech-Services/JoshHub-Local/blob/main/Game-Fixer/attached_assets/Pasted--Neverwinter-RPG-Dramatic-Enhancement-Request-CONTEXT-T_1770553320874.txt); grade D) and the Whirring Wilderness roadmap targets "10-15 NPCs" | The NPC audit and Kingkiller plan: "Depth outranks breadth ... a few richly modelled places are better than a wide, thin map" | Start at the 3-5 fully modelled NPC slice; let counts grow only as each new NPC passes the §N4 template. |
+| **How many NPCs?** | Roadmaps scale the cast up: the Whirring Wilderness roadmap targets "10-15 NPCs" with schedules, relationships and dynamic dialogue | The NPC audit and Kingkiller plan: "Depth outranks breadth ... a few richly modelled places are better than a wide, thin map" | Start at the 3-5 fully modelled NPC slice; let counts grow only as each new NPC passes the N4 template. |
 | **Quest markers** | The main report discusses icon budgets and legible rewards | The Kingkiller plan lists "quest markers" under *Should Not Have* and "slow play rewarded" as a pillar | Genre decides: for a mystery-first simulation use journal, rumours and landmarks instead of markers; for a content-rich sandbox use a small, honest marker budget. |
 | **Free chat with NPCs** | Repository Town offers freeform AI chat with offline fallback | AIDungeonMaster / RTD-009: the AI must not own facts; unknown state denies | Free text is fine as *phrasing* over a closed set of moves; never as a source of world facts. |
 | **Count vs census** | Earlier audit: 258 slots | RTD-003: 319 slots, 99 simulated | See §1. |
@@ -296,7 +296,7 @@ A second pass should surface contradictions, not hide them.
 | Typed events/effects; dialogue and combat do not edit quests directly | Bramblewick, RTD-009, AIDungeonMaster |
 | Persistent NPC identity keys, not names | RTD-003 / RTD-009, Bramblewick (`id`), kkc-adventure (NPC template) |
 | NPC state includes schedule, relationship, memory | Bramblewick (`schedule` field), kkc-adventure, AIDungeonMaster milestone 5, Repository Town |
-| Depth over count | NPC audit, kkc-adventure; contradicted only by wishlists (D grade) |
+| Depth over count | NPC audit, kkc-adventure; scaled up only by roadmap targets (C grade) |
 | Honest status / provenance | JoshRS quest matrix, 3layers canon tags, Repository Town test notes |
 | Forgiving failure, informative feedback | Occupations (rework without deductions), SylviePhonetics (feedback ladder), Lantern Road (non-ideal branch) |
 | Session shape and a deliberate ending | SylviePhonetics, Sleepy, Briarwick (time-boxed, countdown), AIDungeonMaster (pacing, dead air) |
@@ -350,12 +350,10 @@ In order of leverage, each tied to a finding:
 | [bramblewick](https://github.com/Parris-Tech-Services/bramblewick) | **Yes** | Event-driven quest rule; NPC schema with `schedule`; vertical slice |
 | [Aetheria](https://github.com/Parris-Tech-Services/Aetheria) | Partly | Prioritisation advice; "handcrafted, not generic AI filler" |
 | [WhirringWilderness](https://github.com/Parris-Tech-Services/WhirringWilderness) | Partly | NPC-depth roadmap; "polished and focused" principle |
-| [JoshHub-Local](https://github.com/Parris-Tech-Services/JoshHub-Local) | Partly (D) | Neverwinter wishlist (taste signal and contrast) |
 | [CanonRPG](https://github.com/Parris-Tech-Services/CanonRPG) | Slightly | DM-prep tooling roadmap; canon-audit scoring (Canon Health Score) |
 | [repository-town-playtest](https://github.com/Parris-Tech-Services/repository-town-playtest) | Duplicate | Snapshot of ~60 games; the canonical copies live in JoshMemory, which this pass linked instead |
-| Parris-Life-Dashboard (`studio/dnd`) | No | Random hook/NPC/twist generators only; no design reasoning |
 
-**Searched, nothing relevant to fun or NPCs:** Arena, StarHaven, drifter, ForbiddenQuests, energyquest, Wild2, Waypoint, TextGame, random-play, runescapefedoracrashdoctor (already covered as WILDY), the many app/tooling repos (dashboards, budget, exams, DCS and Avance PD, AutoPatch, openclaw, etc.).
+**Searched, nothing relevant to fun or NPCs:** about 100 other repositories, mostly apps, tooling, dashboards and early prototypes (plus WILDY, which the first audit already covered). Private repositories are deliberately not named or cited in this public repo.
 
 ## Appendix B. New source files, by path
 
@@ -363,10 +361,10 @@ In order of leverage, each tied to a finding:
 - kkc-adventure: `RothfussGameDocs/KINGKILLER CHRONICLE TEXT ADVENTURE v1.1 planning Doc.docx`, `RothfussGameDocs/_Improvements.docx`, `RothfussGameDocs/PromptGenerator1-20/generated_prompts/prompt_42_npc_trust_reaction_layer.md` (default branch `master`)
 - campaign-copilot: `docs/adventures/MOTW_THE_LAST_LAUGH_OF_BRIARWICK_KEEPER.md`
 - JoshMemory (`repository-town/`): `PLAYTEST_2026-10-19.md`, `PLAYTEST_2026-10-29.md`, `docs/OCCUPATIONS_PLAYTEST.md`, `docs/RTD_003_NPC_CAST_INVENTORY_2026-10-24.md`, `docs/RTD_004_DIALOGUE_SYSTEM_AUDIT_2026-10-24.md`, `docs/RTN_NPC_CROWD_FALLBACK_TRIAGE_2026-10-25.md`, `games/lantern-road/story/dialogue/DIALOGUE-CHOICE-GRAMMAR.md`, `games/lantern-road/systems/companions/COMPANION-WILLINGNESS-AUTONOMY-SPEC.md`, `games/elodin-deep-lore/ELODIN_GAME_HOOKS.md`, `games/sylvie-phonetics/QA-Recommendations.md`, `games/sylvie-phonetics/docs/ResearchImplementationRoadmap.md`, `games/sleepy/QA-Recommendations.md`
-- joshrs: `docs/QUEST_MATRIX.md`, `docs/377_OPEN_SOURCE_GAMEPLAY_COMPLETENESS_AUDIT_2026-10-31.md`, `docs/FULL_CLASSIC_MMO_CHECKLIST.md`, `docs/PLAY_WITH_SYLVIE.md`
+- joshrs: `docs/QUEST_MATRIX.md`, `docs/377_OPEN_SOURCE_GAMEPLAY_COMPLETENESS_AUDIT_2026-10-31.md`, `docs/FULL_CLASSIC_MMO_CHECKLIST.md`, `docs/` family LAN guide
 - 3layers: `Epic-Quest-Saga/docs/01-product/game-design-document.md`, `vision-and-pillars.md`
 - Bramblewick: `ARCHITECTURE.md`, `DEVELOPMENT_ROADMAP.md`
-- Aetheria: `Improvements.md` · WhirringWilderness: `docs/AAA_INDIE_ROADMAP.md` · JoshHub-Local: `Game-Fixer/attached_assets/Pasted--Neverwinter-RPG-...txt`
+- Aetheria: `Improvements.md` · WhirringWilderness: `docs/AAA_INDIE_ROADMAP.md`
 
 ---
 
