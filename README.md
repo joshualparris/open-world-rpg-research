@@ -289,6 +289,7 @@ WILDY is a small-scale case, not an open-world RPG, but the same rules apply:
 | [ORIGINALITY.md](ORIGINALITY.md) | Why LLMs reuse names like Mira, what research says, and how to get more original names, places and stories; tools in `tools/originality/` |
 | [WRITERS-ROOM.md](WRITERS-ROOM.md) | Per-repo Voice Bibles, original "house writers", naming grammars, and a numbered one-repo-at-a-time roadmap; templates in `templates/` |
 | [ANTISLOP.md](ANTISLOP.md) | What people do against "AI slop", what not to do, our tool-fed edit loop, a measured Lantern Road baseline, and `slop_lint.py` |
+| [prompts/DEEPSEEK-LANTERN-ROAD.md](prompts/DEEPSEEK-LANTERN-ROAD.md) | A paste-ready prompt for an autonomous agent harness to improve one game (Lantern Road) until a measurable Definition of Done is met; retargetable |
 | [CHECKLIST.md](CHECKLIST.md) | Practical design and playtest checklist |
 | [SOURCES.md](SOURCES.md) | Annotated bibliography and evidence quality |
 
