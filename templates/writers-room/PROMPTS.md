@@ -90,3 +90,29 @@ Pick the highest total, not the lowest probability. A strange premise that break
 - Invent a new core NPC to solve a scene.
 - Add a twist that contradicts the registry.
 - Use a banlist as a substitute for a table.
+
+
+## 7. Quality contract
+
+```
+QUALITY CONTRACT
+- Relevance: answer the brief, not a generic version.
+- Density: every paragraph adds a fact, image, decision or feeling.
+- Specificity: use supplied facts; do not invent names/places/claims.
+- Structure: no rhetorical question + answer; no "not X but Y" chains;
+  no signposted conclusion; vary sentence length.
+- Voice: follow the voice bible; if a line could be any fantasy game, rewrite it.
+- Restraint: cut 10% after drafting; do not explain the theme.
+- Unknown facts: say "unknown"; do not invent.
+```
+
+## 8. Anti-slop revision
+
+```
+Edit this draft against the quality rubric. Mark the weakest 10%.
+Cut filler, replace abstractions with concrete details, remove rhetorical
+scaffolding, and read it aloud. Do not add new canon. Return:
+1) the revised draft, 2) a changelog, 3) the three weakest remaining lines.
+```
+
+Run `node tools/slop-audit.mjs --file <draft> --top 15` before and after. Treat the score as triage, not a verdict.

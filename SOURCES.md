@@ -200,6 +200,29 @@ The separate [CREATIVE-VOICE-AND-PLAY-RESEARCH.md](CREATIVE-VOICE-AND-PLAY-RESEA
 
 ---
 
+## Anti-slop and text quality
+
+1. **Shaib, C., Chakrabarty, T., Garcia-Olano, D. & Wallace, B. C. (2025/2026). *Measuring AI “Slop” in Text.*** [arXiv:2509.19163](https://arxiv.org/abs/2509.19163)  
+   Used for: expert taxonomy (information utility/quality/style), binary slop judgments are subjective, strongest predictors relevance/density/tone, automated and LLM slop measurement remain unreliable. **Grade A**, with the caveat that it studies news/QA, not game dialogue.
+
+2. **Paech, S., Roush, A., Goldfeder, J. & Shwartz-Ziv, R. (2025). *Antislop: A Comprehensive Framework for Identifying and Eliminating Repetitive Patterns in Language Models.*** [arXiv:2510.15061](https://arxiv.org/abs/2510.15061)  
+   Used for: >1,000× pattern frequency, 8,000+ patterns, ~90% reduction with FTPO, token-ban failure at 2,000, DPO quality/diversity degradation. **Grade A** (open-model setting).
+
+3. **Roush, A. & Mahajani, P. (2026). *Anti-slopping: An innovation for rectifying LLM writing clichés.*** Thoughtworks. [link](https://research.thoughtworks.com/library/anti-slopping-an-innovation-for-rectifying-llm-writing-cliches)  
+   Used for: 69–96% throughput cost, logit access, anti-slop sampler. **Grade B.**
+
+4. **Clarke, N. (2025). *How “AI” submissions have changed our submissions process.*** Clarkesworld. [link](https://neil-clarke.com/how-ai-submissions-have-changed-our-submissions-process/)  
+   Used for: signal-to-noise collapse, automated triage, human review of every suspicious submission, false positives, no algorithm final. **Grade B** (practitioner case study).
+
+5. **AI Writing Tropes to Avoid / `deslopify` / tropes.fyi.** [list](https://github.com/danicat/skills/blob/main/writing/deslopify/references/tropes.md)  
+   Used for: lexical/structural/style tells. **Grade C** (practitioner heuristic, not a controlled study).
+
+6. **Madaan, A. et al. (2023). *Self-Refine: Iterative Refinement with Self-Feedback.*** NeurIPS 2023. [link](https://papers.nips.cc/paper/2023/hash/91edff07232fb1b55a505a9e9f6c0ff3-Abstract-Conference.html)  
+   Used for: ~20% absolute improvement from iterative self-feedback across seven tasks. **Grade A** (task-dependent).
+
+7. **Shi, L. et al. (2025). *Judging the Judges: A Systematic Study of Position Bias in LLM-as-a-Judge.*** IJCNLP-AACL 2025. [link](https://aclanthology.org/2025.ijcnlp-long.18/)  
+   Used for: position bias across 15 judges, 22 tasks, 150,000+ evaluations; do not use a single LLM judge as final gate. **Grade A.**
+
 ## Claim-to-source map
 
 | Claim | Sources |
@@ -230,6 +253,14 @@ The separate [CREATIVE-VOICE-AND-PLAY-RESEARCH.md](CREATIVE-VOICE-AND-PLAY-RESEA
 | Verbalized Sampling increases diversity 1.6–2.1× | Zhang et al. |
 | Min-p/anti-slop need logits and have costs | Nguyen et al.; Roush & Mahajani |
 | Seeded tables + fixed facts are the right division of labour | Synthesis; Zhao et al.; Mozo Quesada et al. |
+| Slop is multidimensional, not just a word list | Shaib et al. |
+| Binary slop judgments are subjective; automated measurement is open | Shaib et al. |
+| Some slop patterns appear >1,000× more in LLM text | Paech et al. |
+| Antislop/FTPO cuts ~90% but needs logits/throughput | Paech et al.; Roush & Mahajani |
+| Automated triage + human review beats automated judgment | Clarke (Clarkesworld) |
+| Self-Refine improves drafts but is not a final judge | Madaan et al. |
+| LLM judges have position bias | Shi et al. |
+| Reward models over-weight length/structure/jargon/sycophancy/vagueness | Shaib et al. (citing Bharadwaj et al.) |
 
 ---
 

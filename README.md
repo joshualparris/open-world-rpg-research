@@ -2,7 +2,7 @@
 
 **A source-grounded synthesis for large worlds, dense casts and conversations that matter.**
 
-Prepared 2026-11-12 · Desk research, not a playtest report. · Companion files: [REPORT.md](REPORT.md) · [YOUR-REPOS.md](YOUR-REPOS.md) · **[GAME-REPOS-AUDIT.md](GAME-REPOS-AUDIT.md)** (apply the framework to every game repo) · **[AI-NAMING-AND-ORIGINALITY.md](AI-NAMING-AND-ORIGINALITY.md)** (why names repeat, and how to fix it) · **[WRITERS-ROOM.md](WRITERS-ROOM.md)** (showrunner-led voice + seeded tables + roadmap) · **[CREATIVE-VOICE-AND-PLAY-RESEARCH.md](CREATIVE-VOICE-AND-PLAY-RESEARCH.md)** (new evidence on NPC speech, social play, distinct fun and playtest experiments) · [NAMING-PLAYBOOK.md](NAMING-PLAYBOOK.md) · [CHECKLIST.md](CHECKLIST.md) · [SOURCES.md](SOURCES.md)
+Prepared 2026-11-12 · Desk research, not a playtest report. · Companion files: [REPORT.md](REPORT.md) · [YOUR-REPOS.md](YOUR-REPOS.md) · **[GAME-REPOS-AUDIT.md](GAME-REPOS-AUDIT.md)** (apply the framework to every game repo) · **[AI-NAMING-AND-ORIGINALITY.md](AI-NAMING-AND-ORIGINALITY.md)** (why names repeat, and how to fix it) · **[WRITERS-ROOM.md](WRITERS-ROOM.md)** (showrunner-led voice + seeded tables + roadmap) · **[ANTI-SLOP.md](ANTI-SLOP.md)** (quality gates, not word bans) · **[CREATIVE-VOICE-AND-PLAY-RESEARCH.md](CREATIVE-VOICE-AND-PLAY-RESEARCH.md)** (NPC speech, social play, distinct fun and playtest experiments) · [NAMING-PLAYBOOK.md](NAMING-PLAYBOOK.md) · [CHECKLIST.md](CHECKLIST.md) · [SOURCES.md](SOURCES.md)
 
 ---
 
@@ -52,6 +52,24 @@ The better model is not “random names.” It is **one showrunner-led voice per
 Research verdict and full numbered rollout: [WRITERS-ROOM.md](WRITERS-ROOM.md) · copyable kit: [`templates/writers-room/`](templates/writers-room/) · seeded drawer: [`tools/table-draw.mjs`](tools/table-draw.mjs).
 
 The research supports your core instinct: a distinctive voice beats random. The correction is that **voice without entropy becomes pastiche**, and **entropy without voice becomes noise**. Use both, under a showrunner.
+
+---
+
+## Anti-slop is a quality system, not a word list
+
+“AI slop” is not just “delve” and “tapestry.” A 2025/2026 expert taxonomy defines it across **information utility** (density, relevance), **information quality** (factuality, bias) and **style quality** (repetition, templatedness, coherence, fluency, verbosity, tone) — and finds that binary slop judgments are subjective and LLM judges unreliable at identifying it ([Shaib et al.](https://arxiv.org/abs/2509.19163)).
+
+What actually works:
+
+- **A nine-gate quality ladder:** brief → facts → draft → slop profile → fact check → structure → voice → reader test → human sign-off.
+- **Automated triage + human review**, not automated judgment. Clarkesworld’s response to AI submissions is the model: an in-house filter, a suspicious queue, a human on every case, no algorithm final ([Neil Clarke](https://neil-clarke.com/how-ai-submissions-have-changed-our-submissions-process/)).
+- **Source-first generation:** fixed facts, registry, citations; no invented specifics.
+- **Candidate generation + rubric + Self-Refine** where you cannot touch logits; **Antislop Sampler/FTPO** only where you control the model ([Paech et al.](https://arxiv.org/abs/2510.15061)).
+- **Read aloud, cut 10%, blind reader test, fact check, provenance.**
+
+What does not work: static word blacklists, “avoid clichés” prompts, one-shot generation, AI-text detectors as quality gates, and a single LLM judge. Reward models over-weight length, structure, jargon, sycophancy and vagueness — exactly the slop signature ([Shaib et al.](https://arxiv.org/abs/2509.19163)); LLM judges also have position bias ([Shi et al.](https://aclanthology.org/2025.ijcnlp-long.18/)).
+
+Full report: [ANTI-SLOP.md](ANTI-SLOP.md) · quality template: [`templates/writers-room/QUALITY.md`](templates/writers-room/QUALITY.md) · audit tool: [`tools/slop-audit.mjs`](tools/slop-audit.mjs) · pattern list: [`data/slop-patterns.json`](data/slop-patterns.json).
 
 ---
 
@@ -318,7 +336,11 @@ WILDY is a small-scale case, not an open-world RPG, but the same rules apply:
 | [AI-NAMING-AND-ORIGINALITY.md](AI-NAMING-AND-ORIGINALITY.md) | Why LLM names/places/stories are generic, the evidence, and the fix |
 | [NAMING-PLAYBOOK.md](NAMING-PLAYBOOK.md) | Prompt pack, culture worksheet, selection rubric, metrics |
 | [WRITERS-ROOM.md](WRITERS-ROOM.md) | Showrunner-led voice, tables, seeded draws, numbered repo rollout |
-| [CREATIVE-VOICE-AND-PLAY-RESEARCH.md](CREATIVE-VOICE-AND-PLAY-RESEARCH.md) | Additional primary research on NPC character speech, social interaction, idea diversity, fun calibration and project-specific playable tests; follows the writers’ room, doesn't duplicate it |
+| [CREATIVE-VOICE-AND-PLAY-RESEARCH.md](CREATIVE-VOICE-AND-PLAY-RESEARCH.md) | Additional primary research on NPC speech, social interaction, idea diversity, fun calibration and playable tests |
+| [ANTI-SLOP.md](ANTI-SLOP.md) | What slop is, the evidence, and the quality ladder that fixes it |
+| [templates/writers-room/QUALITY.md](templates/writers-room/QUALITY.md) | Nine-gate quality rubric, prompt contract and revision pass |
+| [tools/slop-audit.mjs](tools/slop-audit.mjs) | Heuristic triage for lexical/structural slop and repetition |
+| [data/slop-patterns.json](data/slop-patterns.json) | Tunable pattern watchlist (not a banlist) |
 | [templates/writers-room/](templates/writers-room/) | Copyable voice bible, tables, registry, prompts, audit |
 | [tools/table-draw.mjs](tools/table-draw.mjs) | Deterministic seeded table drawer for fixed facts |
 | [tools/name-audit.mjs](tools/name-audit.mjs) | Dependency-free name concentration/cross-project audit |

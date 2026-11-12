@@ -73,6 +73,10 @@ The model may write **prose, dialogue and description**. It may not:
 - add a new core NPC without a table draw and human approval;
 - resolve a premise by contradicting the registry.
 
+## Quality gate
+
+See `QUALITY.md` for the nine-gate ladder, rubric and slop audit. A high slop score is a **triage flag**, not a verdict; a human editor decides.
+
 ## Evaluation
 
 - Voice adherence: blind A/B against the previous prose.

@@ -158,6 +158,7 @@ writers-room/
     premise.json
   REGISTRY.json         # used names, places, role pairs, provenance
   PROMPTS.md            # fixed-facts contract
+  QUALITY.md            # nine-gate quality ladder, rubric, revision
   AUDIT.md              # CI checks + human gate
 ```
 
@@ -167,6 +168,7 @@ Templates are in [templates/writers-room/](templates/writers-room/). The key fil
 - **TABLES** — curated facts with weights, tags and dependencies. The model never chooses from its own prior.
 - **REGISTRY** — the used-so-far memory and the cross-project collision check.
 - **PROMPTS** — the contract: fixed facts in, prose out; no renaming, no new core nouns.
+- **QUALITY** — the nine-gate quality ladder, rubric, revision pass and slop triage.
 - **AUDIT** — deterministic checks plus a human sign-off.
 
 ### 4.1 The draw ceremony
@@ -238,6 +240,31 @@ The model does **not**:
 
 This is the division of labour that makes the room work.
 
+### 4.5 Anti-slop quality gates
+
+Anti-slop is not a word blacklist. The research treats slop as low **information utility** (density, relevance), low **information quality** (factuality, bias) and poor **style quality** (repetition, templatedness, coherence, fluency, verbosity, tone) — and finds that binary “is this slop?” judgments are subjective and that LLM judges are unreliable at it ([Shaib et al.](https://arxiv.org/abs/2509.19163)).
+
+That means the room needs a **quality ladder**, not a longer banlist:
+
+1. **Brief** — audience, purpose, voice, must-include, must-avoid, sources, length.
+2. **Facts** — registry/table/source; no invented specifics.
+3. **Draft** — fixed facts + voice bible; 2–3 versions if uncertain.
+4. **Slop profile** — automated triage + human read for relevance, density, repetition, templatedness, tone.
+5. **Fact/canon** — every proper noun/number/claim checked.
+6. **Structure** — start in the situation; cut 10%; remove rhetorical scaffolding.
+7. **Voice** — read aloud; blind identify the game; name-covered character test.
+8. **Reader/player test** — what happened, what did you learn, what next, what felt generic?
+9. **Human sign-off + provenance.**
+
+A practical CI policy:
+
+- **Fail** on schema/registry contradictions.
+- **Warn** on `slop-audit` score above a project threshold.
+- **Route** high scores to a human “suspicious queue” — the Clarkesworld model: automated triage, human review, no algorithm final ([Neil Clarke](https://neil-clarke.com/how-ai-submissions-have-changed-our-submissions-process/)).
+- **Never** auto-publish or auto-reject on a slop score.
+
+The strongest open-model lever is the **Antislop Sampler/FTPO** (8,000+ patterns, ~90% reduction), but it needs logits/fine-tuning and costs 69–96% throughput; most APIs cannot use it ([Paech et al.](https://arxiv.org/abs/2510.15061), [Thoughtworks](https://research.thoughtworks.com/library/anti-slopping-an-innovation-for-rectifying-llm-writing-cliches)). For APIs, use candidate generation, a rubric, Self-Refine and human editing.
+
 ---
 
 ## 5. Per-repo voice seeds
@@ -269,9 +296,9 @@ The point is not to make every game “literary.” It is to make each game **id
 ### Phase 1 — Build the room kit (1 week, once)
 
 1. **Write the operating principles.** Voice is the frame; tables are entropy; registry is memory; the human showrunner owns canon. Put this in `writers-room/README.md`.
-2. **Create the templates.** Use [templates/writers-room/](templates/writers-room/): `VOICE.md`, tables, registry, prompts, audit.
-3. **Install the tools.** `node tools/table-draw.mjs` for deterministic facts; `node tools/name-audit.mjs` for collisions; a CI schema check.
-4. **Define the gates.** Voice bible approved; 30+ curated facts per culture; 3 reproducible draws; 3 scenes written; blind reader identifies the game; zero new cross-project core collisions.
+2. **Create the templates.** Use [templates/writers-room/](templates/writers-room/): `VOICE.md`, `QUALITY.md`, tables, registry, prompts, audit.
+3. **Install the tools.** `node tools/table-draw.mjs` for deterministic facts; `node tools/name-audit.mjs` for collisions; `node tools/slop-audit.mjs` for quality triage; a CI schema check.
+4. **Define the gates.** Voice bible approved; 30+ curated facts per culture; 3 reproducible draws; 3 scenes written; blind reader identifies the game; slop profile reviewed by a human; zero new cross-project core collisions.
 
 **Gate:** a one-page voice bible and a seeded draw that a second person can reproduce exactly.
 
@@ -281,7 +308,7 @@ The point is not to make every game “literary.” It is to make each game **id
 6. **Build the WILDY tables.** 30 names (camp/road cultures), 12 places, 12 trades, 12 quirks, 6 premise axes. Mark Mira as reserved for Lantern Road; draw a replacement if needed.
 7. **Draw and rewrite three NPCs.** Give each a fixed name, trade, quirk, want, contradiction and one callback. No model-chosen names.
 8. **Blind test.** Show 200 words from the old and new versions to 3–5 readers; ask “which game is this?” and “would you talk to this person again?”
-9. **CI.** Name audit, registry, forbidden phrases, cross-project collisions.
+9. **CI.** Name audit, registry, forbidden phrases, cross-project collisions, slop-audit warning, human review queue.
 
 **Gate:** 3/5 readers identify WILDY from a 200-word sample; no new cross-project core names; the showrunner prefers the new voice to the old.
 
@@ -290,7 +317,7 @@ The point is not to make every game “literary.” It is to make each game **id
 10. **Freeze the Grey March voice.** Shared with Marsh; reserve Rowan/Tessa/Elira; write the naming field by settlement and class.
 11. **Build shared Grey March tables.** Names, places, trades, quirks, premise axes; one registry for Lantern + Marsh.
 12. **Rewrite five NPCs** with fixed facts, 3-node conversations and first-return callbacks. Add one NPC-to-NPC scene.
-13. **Audit.** No duplicate name+role pairs; faction consequences visible; blind voice test.
+13. **Audit.** No duplicate name+role pairs; faction consequences visible; blind voice test; slop profile and human quality pass.
 
 **Gate:** Lantern Road and Marsh share a registry with zero accidental collisions; a reader can distinguish Grey March from WILDY and Repository Town.
 
@@ -444,5 +471,11 @@ That is the difference between “AI wrote a fantasy game” and “this studio 
 - Brzozowski, M. & Chung, N. C. (2026). *The Ghost Couple.* [arXiv:2606.02184](https://arxiv.org/abs/2606.02184) — correlated name ensembles.
 - Doshi, A. R. & Hauser, O. P. (2024). *Generative AI enhances individual creativity but reduces the collective diversity of novel content.* [doi](https://doi.org/10.1126/sciadv.adn5290).
 - Shumailov, I. et al. (2024). *AI models collapse when trained on recursively generated data.* [doi](https://doi.org/10.1038/s41586-024-07566-y).
+- Shaib, C., Chakrabarty, T., Garcia-Olano, D. & Wallace, B. C. (2025/2026). *Measuring AI “Slop” in Text.* [arXiv:2509.19163](https://arxiv.org/abs/2509.19163) — slop taxonomy, subjectivity, automated limits.
+- Paech, S., Roush, A., Goldfeder, J. & Shwartz-Ziv, R. (2025). *Antislop.* [arXiv:2510.15061](https://arxiv.org/abs/2510.15061) — 8,000+ patterns, 90% reduction, FTPO, DPO degradation.
+- Clarke, N. (2025). *How “AI” submissions have changed our submissions process.* [Clarkesworld](https://neil-clarke.com/how-ai-submissions-have-changed-our-submissions-process/) — automated triage, human review, false positives.
+- Madaan, A. et al. (2023). *Self-Refine.* [NeurIPS 2023](https://papers.nips.cc/paper/2023/hash/91edff07232fb1b55a505a9e9f6c0ff3-Abstract-Conference.html) — iterative revision gains.
+- Shi, L. et al. (2025). *Judging the Judges.* [IJCNLP-AACL 2025](https://aclanthology.org/2025.ijcnlp-long.18/) — position bias in LLM judges.
+- *AI Writing Tropes to Avoid* / `deslopify`. [list](https://github.com/danicat/skills/blob/main/writing/deslopify/references/tropes.md) — practitioner trope list.
 
 **Limits:** the author analyses are interpretive craft readings, not controlled studies; the TV-room sources describe a production model, not a guaranteed quality mechanism; the sampling research is mostly on English creative writing, not game dialogue; no playtest has validated this specific pipeline yet.

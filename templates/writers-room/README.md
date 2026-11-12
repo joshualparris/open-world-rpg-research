@@ -10,8 +10,9 @@ Copy this directory into a game repo as `writers-room/`.
 4. **Seeded draws.** Same seed + same tables = same facts. The seed is the arc/quest ID, not the clock.
 5. **Fixed facts in, prose out.** The model may write dialogue and description; it may not rename canon.
 6. **Registry in code/CI.** The prompt copy is a reminder; validation is authoritative.
-7. **Fit before novelty.** Generate 10–20 candidates, reject voice/fact breaks, then choose from the coherent lower-probability band.
-8. **Human approval.** A person signs off every core name and premise.
+7. **Quality is a ladder, not a word list.** Brief → facts → draft → slop profile → fact check → structure → voice → reader → human sign-off.
+8. **Fit before novelty.** Generate 10–20 candidates, reject voice/fact breaks, then choose from the coherent lower-probability band.
+9. **Human approval.** A person signs off every core name and premise.
 
 ## Files
 
@@ -20,6 +21,7 @@ Copy this directory into a game repo as `writers-room/`.
 - `REGISTRY.example.json` — used names/places/role pairs and provenance.
 - `PROMPTS.md` — the fixed-facts contract and candidate prompts.
 - `AUDIT.md` — deterministic checks and the human gate.
+- `QUALITY.md` — nine-gate quality ladder, rubric, slop audit and revision prompts.
 
 ## Quick start
 
@@ -28,6 +30,7 @@ cp -r templates/writers-room <game>/writers-room
 node tools/table-draw.mjs --seed <arc-id> --table names --count 3 --filter culture=<culture>
 node tools/table-draw.mjs --seed <arc-id> --table premise --count 3
 node tools/name-audit.mjs --root <game>
+node tools/slop-audit.mjs --root <game>/content --top 15
 ```
 
 Then fill `VOICE.md`, replace the example tables, and write the first scene from fixed facts.
