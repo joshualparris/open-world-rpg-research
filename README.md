@@ -2,7 +2,7 @@
 
 **A source-grounded synthesis for large worlds, dense casts and conversations that matter.**
 
-Prepared 2026-11-12 · Desk research, not a playtest report. · Companion files: [REPORT.md](REPORT.md) · [YOUR-REPOS.md](YOUR-REPOS.md) · [CHECKLIST.md](CHECKLIST.md) · [SOURCES.md](SOURCES.md)
+Prepared 2026-11-12 · Desk research, not a playtest report. · Companion files: [REPORT.md](REPORT.md) · [YOUR-REPOS.md](YOUR-REPOS.md) · **[GAME-REPOS-AUDIT.md](GAME-REPOS-AUDIT.md)** (apply the framework to every game repo) · [CHECKLIST.md](CHECKLIST.md) · [SOURCES.md](SOURCES.md)
 
 ---
 
@@ -175,6 +175,18 @@ Open-world fatigue is partly a time-budget problem. Long traversal, repeated dia
 
 ---
 
+## Apply it to the portfolio
+
+[GAME-REPOS-AUDIT.md](GAME-REPOS-AUDIT.md) applies this framework to the actual game repos — Repository Town, Lantern Road, The Undercity, Neathbound, Whirring Wilderness, KKC Adventure, Astra, Grey March, dndgame/SwordCoast, Whispering-Wilds and WILDY — with a directional scorecard, repo-specific top moves and a shared Actor & Dialogue Core plan.
+
+The short version:
+
+- **Storylet games** (Undercity, Neathbound) need a recurring **cast**, not more storylets.
+- **Simulation games** (Repository Town, Lantern Road, Marsh) need **authored intimacy**, not more systems.
+- **AI games** (Astra) need a structured **NPC ledger**, not a better prompt.
+- **Character games** (KKC) need **world and consequence**, not more voices.
+- **Small games** (WILDY, Whirring, dndgame) need **depth per NPC**, not scale.
+
 ## What your repositories already know
 
 A full audit is in [YOUR-REPOS.md](YOUR-REPOS.md). The short version:
@@ -269,6 +281,7 @@ WILDY is a small-scale case, not an open-world RPG, but the same rules apply:
 | File | Purpose |
 | --- | --- |
 | [REPORT.md](REPORT.md) | The long-form argument, evidence and design detail |
+| [GAME-REPOS-AUDIT.md](GAME-REPOS-AUDIT.md) | Repo-by-repo scorecard and prescriptions for the game portfolio |
 | [YOUR-REPOS.md](YOUR-REPOS.md) | Audit of existing research across your repositories |
 | [CHECKLIST.md](CHECKLIST.md) | Practical design and playtest checklist |
 | [SOURCES.md](SOURCES.md) | Annotated bibliography and evidence quality |
