@@ -234,3 +234,20 @@ Measure: **distinct-name ratio**, **banlist hit rate**, **surname repeats**, **a
 ---
 
 *See [ORIGINALITY.md](ORIGINALITY.md) for the underlying research on why models repeat names, [MORE-FROM-YOUR-REPOS.md](MORE-FROM-YOUR-REPOS.md) for the NPC and dialogue findings, and [`tools/originality/`](tools/originality/) and [`templates/`](templates/) for the tools and templates.*
+
+### Progress log (2026-11-13)
+
+All work is on branch `claude/new-session-yrqsqk` in each repo. Nothing is merged; no PRs. "Draft" means the voice files await Josh's approval.
+
+| # | Repo | Result | Evidence |
+| ---: | --- | --- | --- |
+| 12 | Aetheria | Playable first slice: exits, dialogue, 4 quests, 6 NPCs with profiles, journal, XP, saves; 4 default names replaced | 12 content tests; real-browser first-quest run, 16 checks passed |
+| 13 | Schism | Draft voice package and read-only audit; canon and code untouched (its `AGENTS.md` locks canon) | Mara and Thorne are locked canon, nothing to rename |
+| 15 | StarHaven | 2 default names replaced; one-page bible and `voice.json` | real-browser load of name, mission and rescue branch, no errors |
+| 16 | Kingkiller adventures | Constraints-only canon guard in both repos; **finding:** the sibling repo tracks third-party documents in a public repo | needs Josh: make private, remove files, decide on history |
+| 17 | campaign-copilot | Mini bible for the Briarwick scenario; one default name (Mara Vell) flagged, not renamed because it is prep for a specific table | replacement drawn from the generator, ready to apply |
+| 18 | Whirring Wilderness | Draft bible, NPC profiles and naming grammar inferred from existing text (no taste brief was found in the repo) | docs only |
+| 19 | Bramblewick | Already clean (names fit the register); two flagged lines rewritten | lint mean 2.7 to 0.2; all JSON parses; game not run (Godot) |
+| 20 | Small games | dndgame: 1 name replaced; NebulaDice-Browser: 2 replaced; Serenity-Keep-Flying, drifter, Waypoint, Arena: 0 hits; AstraDndGame: only a default name inside minified bundles, left | dndgame 4 of 4 Playwright tests pass; NebulaDice progression test passes |
+
+Not started: **14** (Neathbound and The Undercity live in JoshMemory, whose rules require a coordination-board claim before editing), and the **A/B gate after item 9** has not been run, so the order in this roadmap was not followed strictly: items 12 onward were done at Josh's request ahead of the gate.
