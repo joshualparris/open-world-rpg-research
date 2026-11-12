@@ -2,7 +2,7 @@
 
 **A source-grounded synthesis for large worlds, dense casts and conversations that matter.**
 
-Prepared 2026-11-12 · Desk research, not a playtest report. · Companion files: [REPORT.md](REPORT.md) · [YOUR-REPOS.md](YOUR-REPOS.md) · **[GAME-REPOS-AUDIT.md](GAME-REPOS-AUDIT.md)** (apply the framework to every game repo) · **[AI-NAMING-AND-ORIGINALITY.md](AI-NAMING-AND-ORIGINALITY.md)** (why names repeat, and how to fix it) · **[WRITERS-ROOM.md](WRITERS-ROOM.md)** (showrunner-led voice + seeded tables + roadmap) · [NAMING-PLAYBOOK.md](NAMING-PLAYBOOK.md) · [CHECKLIST.md](CHECKLIST.md) · [SOURCES.md](SOURCES.md)
+Prepared 2026-11-12 · Desk research, not a playtest report. · Companion files: [REPORT.md](REPORT.md) · [YOUR-REPOS.md](YOUR-REPOS.md) · **[GAME-REPOS-AUDIT.md](GAME-REPOS-AUDIT.md)** (apply the framework to every game repo) · **[AI-NAMING-AND-ORIGINALITY.md](AI-NAMING-AND-ORIGINALITY.md)** (why names repeat, and how to fix it) · **[WRITERS-ROOM.md](WRITERS-ROOM.md)** (showrunner-led voice + seeded tables + roadmap) · **[CREATIVE-VOICE-AND-PLAY-RESEARCH.md](CREATIVE-VOICE-AND-PLAY-RESEARCH.md)** (new evidence on NPC speech, social play, distinct fun and playtest experiments) · [NAMING-PLAYBOOK.md](NAMING-PLAYBOOK.md) · [CHECKLIST.md](CHECKLIST.md) · [SOURCES.md](SOURCES.md)
 
 ---
 
@@ -318,6 +318,7 @@ WILDY is a small-scale case, not an open-world RPG, but the same rules apply:
 | [AI-NAMING-AND-ORIGINALITY.md](AI-NAMING-AND-ORIGINALITY.md) | Why LLM names/places/stories are generic, the evidence, and the fix |
 | [NAMING-PLAYBOOK.md](NAMING-PLAYBOOK.md) | Prompt pack, culture worksheet, selection rubric, metrics |
 | [WRITERS-ROOM.md](WRITERS-ROOM.md) | Showrunner-led voice, tables, seeded draws, numbered repo rollout |
+| [CREATIVE-VOICE-AND-PLAY-RESEARCH.md](CREATIVE-VOICE-AND-PLAY-RESEARCH.md) | Additional primary research on NPC character speech, social interaction, idea diversity, fun calibration and project-specific playable tests; follows the writers’ room, doesn't duplicate it |
 | [templates/writers-room/](templates/writers-room/) | Copyable voice bible, tables, registry, prompts, audit |
 | [tools/table-draw.mjs](tools/table-draw.mjs) | Deterministic seeded table drawer for fixed facts |
 | [tools/name-audit.mjs](tools/name-audit.mjs) | Dependency-free name concentration/cross-project audit |
