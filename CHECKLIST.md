@@ -349,4 +349,19 @@ See [ORIGINALITY.md](ORIGINALITY.md).
 
 ---
 
+## 15. Voice and writers' room (per repo)
+
+See [WRITERS-ROOM.md](WRITERS-ROOM.md) and [`templates/VOICE-BIBLE.md`](templates/VOICE-BIBLE.md).
+
+- [ ] The repo has a Voice Bible (premise, house style, naming grammar, lexicon, cast speech, samples).
+- [ ] Names, places and premises come from the repo's own naming grammar in code, not from the model.
+- [ ] Existing canon is reserved in the registry so new names never collide with it.
+- [ ] One family = one surname; no surname is reused by unrelated people.
+- [ ] Each place has a reason to exist (trade, crossing, works).
+- [ ] Three characters can be told apart with their names hidden (blind test).
+- [ ] Writers are original house roles with house rules; none says "write like <living author>".
+- [ ] A human showrunner approves each batch and owns canon changes.
+
+---
+
 *If most answers are “yes,” the world and cast are probably doing the hard work. If not, start with presence and density before adding more map or more NPCs.*

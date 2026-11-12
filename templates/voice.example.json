@@ -1,0 +1,32 @@
+{
+  "name": "Lantern Road (DRAFT: inferred from existing public canon, for the owner to approve or change)",
+  "_note": "Phonology and word lists below were inferred from the names already used in the Lantern Road docs. Nothing here is canon until you say so.",
+
+  "given": {
+    "on": ["","","d","f","h","j","k","l","m","n","r","s","t","v","w","y"],
+    "v": ["a","e","i","o"],
+    "co": ["","n","n","r","k","d","l","s","th"],
+    "syllables": [2, 2, 1],
+    "length": [3, 7]
+  },
+
+  "surname": {
+    "mode": "word",
+    "words": ["Ferrow","Sallow","Tarn","Gorse","Ling","Bracken","Sedge","Teasel","Cobb","Flint","Haddow","Mallow","Ostler","Rudd","Skerry","Tolland","Vetch","Wattle","Heron","Loach","Culver","Fuller","Thack","Hobbs","Quarrel","Dunnock","Ketch","Lowther","Marram","Nettle","Orrell","Pargeter"]
+  },
+  "avoid": ["Reed", "Kevin", "Mira", "Elara", "Elias"],
+  "max_surname_repeats": 1,
+
+  "place": {
+    "heads": ["Alder","Black","Candle","Grey","Hearth","Ash","Marl","Tallow","Rush","Heron","Sallow","Brine","Cinder","Ferry","Kiln","Lamp","Salt","Peat","Thatch","Wick"],
+    "tails": ["watch","salt","mere","fen","wick","ford","stead","cross","market","gate","reach","holm"],
+    "kinds": ["a pilgrim waystation","a marsh causeway toll","a lamp-oil depot","a fever hospice","a salt-pan hamlet","a ferry landing","a ledger-office town","a shrine on stilts"]
+  },
+
+  "trades": ["lamp-trimmer","oil-seller","ferryman","salt-raker","reed-cutter","causeway warden","hospice nurse","ledger clerk","chandler","tallow-boiler","eel-smoker","peat-cutter","pilgrim guide","bell-ringer","net-weaver","kiln-tender"],
+  "quirks": ["keeps a private ledger of favours","will not light a lamp before the bell","salts every doorway","counts pilgrims aloud and stops at seven","writes names on the hospice wall in chalk","answers questions with a price","never sits with their back to the road","mends what is not theirs"],
+  "wants": ["to have a debt written off without admitting it existed","to be thanked by someone who does not know them","to see the tower dark one night","to hear the road's name said without fear","to outlive a rival's ledger","to be buried near a lamp","to finish a pilgrimage they abandoned"],
+
+  "reserved": ["Edda Briar","Fen Lark","Yor Dane","Nera Vale","Tobin Reed","Vesk Harran","Sen Marrow","Iven Holt","Alwen Reed","Oswin Marris","Halden Crow","Joric Pell","Rowan Pike","Tessa Reed","Sister Elira","Mira","Garrick","Oren","Brindle",
+               "place:Alderwatch","place:Blacksalt","place:Candlemere","place:Greyfen","place:Hearthwick"]
+}
